@@ -1,0 +1,109 @@
+.img-centrar{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%
+  top: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:white;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+li a:hover:not(.active) {
+  background-color: gray;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.content {
+  padding: 16px;
+}
+header{
+  background-color:white;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 70px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .example {
+        background: red;
+    }
+    .img-centrar{
+      height:100px;
+      width: 385px;
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .example {
+        background: green;
+    }
+    .img-centrar{
+      height: 120px;
+      width: 462px;
+    }
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .example {
+        background: blue;
+    }
+    .img-centrar{
+      height: 140px;
+      width: 539px;
+    }
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .example {
+        background: orange;
+    }
+    .img-centrar{
+      height: 160px;
+      width: 616px;
+    }
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .example {
+        background: pink;
+    }
+    .img-centrar{
+      height: 180px;
+      width: 752px;
+    }
+  }
