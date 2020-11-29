@@ -10,9 +10,25 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color:white;
+  background-color:#001845;
 }
-
+#muestra{
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  padding-bottom: 5px;
+  font-size: 25px;
+  display: block;
+  background-color: #001845;
+}
+#mostrar{
+  display: none;
+}
+#show{
+  margin:5px;
+  display:none;
+}
 li {
   float: left;
   border-right:1px solid #bbb;
@@ -24,18 +40,19 @@ li:last-child {
 
   li a {
     display: block;
-    color: black;
+    color: white;
     text-align: center;
     padding: 14px 16px;
+    padding-top: 0;
     text-decoration: none;
   }
 
 li a:hover:not(.active) {
-  background-color: gray;
+  background-color: #979DAC;
 }
 
 .active {
-  background-color: #4CAF50;
+  background-color: #0466C8;
 }
 .sticky {
   position: fixed;
@@ -46,7 +63,7 @@ li a:hover:not(.active) {
   padding: 16px;
 }
 header{
-  background-color:white;
+  background-color:#33415C;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
@@ -62,6 +79,12 @@ header{
       height:100px;
       width: 385px;
     }
+    #hide{
+      display: none;
+    }
+    #show{
+      display: block;
+    }
   }
   
   /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -72,6 +95,15 @@ header{
     .img-centrar{
       height: 120px;
       width: 462px;
+    }
+    #hide{
+      display: block;
+    }
+    #show{
+      display: none;
+    }
+    #mostrar{
+      display: none;
     }
   }
   
@@ -84,6 +116,15 @@ header{
       height: 140px;
       width: 539px;
     }
+    #hide{
+      display: block;
+    }
+    #show{
+      display: none;
+    }
+    #mostrar{
+      display: none;
+    }
   } 
   
   /* Large devices (laptops/desktops, 992px and up) */
@@ -95,6 +136,15 @@ header{
       height: 160px;
       width: 616px;
     }
+    #hide{
+      display: block;
+    }
+    #show{
+      display: none;
+    }
+    #mostrar{
+      display: none;
+    }
   } 
   
   /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -105,5 +155,14 @@ header{
     .img-centrar{
       height: 180px;
       width: 752px;
+    }
+    #hide{
+      display: block;
+    }
+    #show{
+      display: none;
+    }
+    #mostrar{
+      display: none;
     }
   }
