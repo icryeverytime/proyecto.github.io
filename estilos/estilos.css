@@ -89,6 +89,11 @@ header{
     #show{
       display: block;
     }
+    .pie{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
   
   /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -108,6 +113,10 @@ header{
     }
     #mostrar{
       display: none;
+    }
+    .pie{
+      flex-direction: row;
+      justify-content: space-evenly;
     }
   }
   
@@ -129,6 +138,10 @@ header{
     #mostrar{
       display: none;
     }
+    .pie{
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
   } 
   
   /* Large devices (laptops/desktops, 992px and up) */
@@ -148,6 +161,10 @@ header{
     }
     #mostrar{
       display: none;
+    }
+    .pie{
+      flex-direction: row;
+      justify-content: space-evenly;
     }
   } 
   
@@ -169,6 +186,9 @@ header{
     #mostrar{
       display: none;
     }
+    .pie{
+      flex-direction: row;
+    }
   }
   footer
   {
@@ -178,3 +198,33 @@ header{
     padding: 0;
     margin-bottom: 0;
   }
+.pie{
+  background-color: #0466C8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.pie >div{
+  width: 160px;
+  margin: 10px;
+  text-align: center;
+  line-height: 20px;
+}
+.copyright{
+  background-color: #979DAC;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 1px;
+}
+.contenido{
+  padding: 13px;
+}
+.linkpie{
+  color: white;
+}
+.linkpie:hover{
+  color: #979DAC;
+}
+
