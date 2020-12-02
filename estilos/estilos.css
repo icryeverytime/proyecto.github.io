@@ -1,3 +1,7 @@
+body {
+    padding: 0;
+    margin: 1px;
+}
 .img-centrar{
   display: block;
   margin-left: auto;
@@ -165,4 +169,12 @@ header{
     #mostrar{
       display: none;
     }
+  }
+  footer
+  {
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: 0;
+    margin-bottom: 0;
   }
