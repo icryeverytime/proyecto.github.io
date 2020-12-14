@@ -8,7 +8,7 @@ body{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%
+  width: 100%;
   top: 0;
 }
 ul {
@@ -197,9 +197,8 @@ header{
   }
   footer
   {
-    bottom: 0;
     width: 100%;
-    color: #001835;
+    color: #ffffff;
     padding: 0;
     margin-bottom: 0;
   }

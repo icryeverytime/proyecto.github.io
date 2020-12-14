@@ -1,25 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html id="sw" lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pagina Principal</title>
         <link rel="shortcut icon" href="img/favicon.ico"/>
         <link rel="stylesheet" href="estilos/estilos.css"/>
+        <link rel="stylesheet" href="estilos/estilos2sw.css">
         <script src="https://kit.fontawesome.com/cebbaaaaab.js" crossorigin="anonymous"></script>
-      <script>
-        function tres(){
-          var tres=document.getElementById("mostrar");
-            tres.style.display="block";
-        }
-        function dos()
-        {
-          var dos=document.getElementById("mostrar");
-          dos.style.display="none";
-        }
-      </script>
+        <script src="js/funciones.js"></script>
+
     </head>
-    <body>
+    <body id="sw">
         <div id="navbar">
             <header>
                 <a href="index.html">
@@ -29,10 +21,10 @@
                 </header>
                 <nav>
                     <ul>
-                        <li><a class="active" id="hide" href="index.html"><br>Inicio</a></li>
+                        <li><a id="hide" href="index.html"><br>Inicio</a></li>
                         <li><a href="aas.html" id="hide"><br>Tienda</a></li>
-                        <li><a href="contact.asp" id="hide"><br>Acerca de</a></li>
-                        <li><a href="about.asp" id="hide"><br>Contáctanos</a></li>
+                        <li><a class="active" href="acercade.php" id="hide"><br>Acerca de</a></li>
+                        <li><a href="contact.php" id="hide"><br>Contáctanos</a></li>
                         <li><a href="about.asp" id="hide"><br>Ayuda</a></li>
                         <li style="float:right;text-align: center;height: 50.8px;"><a href="login.html">Login</a></li>
                         <li onclick="tres()">
@@ -50,23 +42,77 @@
                   <a href="about.asp" id="muestra">Ayuda</a>
                 </div>
         </div>
+
         <div class="content">
 
+        <div style="overflow:hidden; position:absolute; left:0; top:0; width:50px; height:25px;">
+  <div style="margin-top:-290px;">
+  <object width="420" height="315">
+    <param name="movie" value="https://www.youtube.com/v/EjMNNpIksaI?version=3&amp;hl=en_US&autoplay=1&amp;autohide=2"></param>
+    <param name="allowFullScreen" value="true"></param>
+    <param name="allowscriptaccess" value="always"></param>
+    <embed src="https://www.youtube.com/v/EjMNNpIksaI?version=3&amp;hl=en_US&autoplay=1&amp;autohide=2" type="application/x-shockwave-flash" width="420" height="315" allowscriptaccess="always" allowfullscreen="true"></embed>
+  </object>
+  </div>
+</div>
+
+<p id="start">A short time ago in a browser very, very close&hellip;</p>
+
+<h1>STAR WARS<sub>titles in CSS3</sub></h1>
+
+<div id="titles">
+  <div id="titlecontent">
+
+    <p class="center">EPISODE III<br />
+      LA VENGANZA DE GINA</p>
+
+    <p>Nuestra historia.</p>
+
+    <p>Todo esto comienza con un grupo de estudiantes de la carrera de I.S.C quienes deben sobrevivir a los proyectos finales del semestre en línea.</p>
+
+    <p>Before movie-buffs start ranting, I realize Star Wars wasn't the first to use crawling 3D titles, but few of you will remember the Flash Gordon series or the 1936 adaption of HG Wells' "Things to Come".</p>
+
+    <p>Also, by mentioning "Star Wars", everyone will understand what I mean. And I'll receive several thousand more visits.</p>
+
+    <p>The scrolling titles work well in Chrome, Safari and Firefox. Opera doesn't implement 3D transforms yet, but the text will scroll. IE users receive a blank page. A shame, but IE10 should support it.</p>
+
+    <p>So how does it work? Well, it's fairly simple. We have an outer absolute DIV (#titles) which is rotated along the X-axis using perspective to give the impression of depth. The same DIV also has an :after psuedo-element which applies a linear gradient so the text appears to fade out.</p>
+
+    <p>Inside, we have another absolutely-positioned DIV which contains the text (#titlecontent). The top is set to 100% to ensure it starts off-screen then uses CSS3 animation to move it upward over time. No JavaScript is required.</p>
+
+    <p>You will probably need to adjust the movement amount and timing depending on the quantity of text you want to show. The 3D depth can also be tweaked in the #titles declaration.</p>
+
+    <p>All the code is contained in this single HTML file&hellip;</p>
+
+    <p class="center">View the source, Luke!</p>
+  
+    <p>Sorry. Couldn't resist it.</p>
+  
+    <p>You're welcome to use this demonstration code in your own sites. Please link back to the original article at:</p>
+
+    <p class="center"><a href="http://www.sitepoint.com/css3-starwars-scrolling-text/">sitepoint.com/<br />css3-starwars-scrolling-text/</a></p>
+
+    <p>and give me a shout on Twitter <a href="https://twitter.com/craigbuckler">@craigbuckler</a> &ndash; I'd love to see how you use and abuse it!</p>
+
+    <p>Finally, Han shot first and the original, unadulterated movies remain the best. Stop fiddling with them, George!</p>
+    </div>
+</div>
+<iframe style="visibility:hidden" width="560" height="315" src="https://www.youtube.com/embed/1KAOq7XX2OY" frameborder="0" allowfullscreen></iframe>
         </div>
         <footer>
           <div class="pie">
              <div>
-               <h2>Sobre nosotros</h2>
+               <h2>Sobre nosotros</h2><br>
                <a href="acercade.php" class="linkpie">Más información</a>
              </div>
              <div>
-               <h2>Síganos</h2>
+               <h2>Síganos</h2><br>
                <a href="https://www.facebook.com/Midnight-Profesional-113600053882887"><img src="img/facebook-icon.png" width="40px" height="40px"></a>
                <a href="https://www.instagram.com/midnightprofessional/"><img src="img/Instagram.png" width="40px" height="40px"></a>
                <a href="https://twitter.com/MidnightProfes1"><img src="img/Twitter-icon.png" width="40px" height="40px"></a>
              </div>
              <div>
-              <h2>Contáctanos</h2>
+              <h2>Contáctanos</h2><br>
               <a href="contact.php" class="linkpie">Formulario de contacto</a>
              </div>
           </div>
@@ -77,75 +123,6 @@
             </div>
           </div>
         </footer>
-        <script>
-            window.onscroll = function() {myFunction()};
-            var navbar = document.getElementById("navbar");
-            var sticky = navbar.offsetTop;
-            var xl=window.matchMedia('(min-width: 1200px)');
-            var l=window.matchMedia('(min-width: 992px)');
-            var m=window.matchMedia('(min-width: 768px)');
-            var s=window.matchMedia('(min-width: 600px)');
-            var xs=window.matchMedia('(max-width: 600px)');
-            
-            function myFunction() {
-              var dos=document.getElementById("mostrar");
-              dos.style.display="none";
-              if (window.pageYOffset > sticky) {
-                navbar.classList.add("sticky");
-                if(xl.matches)
-                {
-                  document.getElementById("head").style.height='120px';
-                  document.getElementById("head").style.width='462px'; 
-                }
-                if(l.matches)
-                {
-                  document.getElementById("head").style.height='100px';
-                document.getElementById("head").style.width='385px';
-                }
-                if(m.matches)
-                {
-                  document.getElementById("head").style.height='80px';
-                document.getElementById("head").style.width='308px';
-                }
-                if(s.matches)
-                {
-                  document.getElementById("head").style.height='60px';
-                document.getElementById("head").style.width='231px';
-                }
-                if(xs.matches)
-                {
-                  document.getElementById("head").style.height='40px';
-                document.getElementById("head").style.width='231px';
-                }  
-              } else {
-                navbar.classList.remove("sticky");
-                if(xl.matches)
-                {
-                  document.getElementById("head").style.height='180px';
-                  document.getElementById("head").style.width='752px'; 
-                }
-                if(l.matches)
-                {
-                  document.getElementById("head").style.height='160px';
-                document.getElementById("head").style.width='616px';
-                }
-                if(m.matches)
-                {
-                  document.getElementById("head").style.height='140px';
-                document.getElementById("head").style.width='539px';
-                }
-                if(s.matches)
-                {
-                  document.getElementById("head").style.height='120px';
-                document.getElementById("head").style.width='462px';
-                }
-                if(xs.matches)
-                {
-                  document.getElementById("head").style.height='100px';
-                document.getElementById("head").style.width='385px';
-                }  
-              }
-            }
-            </script>
+       
     </body>
 </html>
