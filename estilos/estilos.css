@@ -199,7 +199,7 @@ header{
   {
     bottom: 0;
     width: 100%;
-    color: white;
+    color: #001835;
     padding: 0;
     margin-bottom: 0;
   }
@@ -230,6 +230,6 @@ header{
   color: white;
 }
 .linkpie:hover{
-  color: #979DAC;
+  color: #001835;
 }
 
