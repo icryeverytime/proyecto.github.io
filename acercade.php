@@ -45,7 +45,7 @@
 
         <div class="content">
 
-        <div style="overflow:hidden; position:absolute; left:0; top:0; width:50px; height:25px;">
+        <div style="overflow:hidden; position:absolute;width:50px; height:25px; left: -5px;">
   <div style="margin-top:-290px;">
   <object width="420" height="315">
     <param name="movie" value="https://www.youtube.com/v/EjMNNpIksaI?version=3&amp;hl=en_US&autoplay=1&amp;autohide=2"></param>
@@ -53,26 +53,25 @@
     <param name="allowscriptaccess" value="always"></param>
     <embed src="https://www.youtube.com/v/EjMNNpIksaI?version=3&amp;hl=en_US&autoplay=1&amp;autohide=2" type="application/x-shockwave-flash" width="420" height="315" allowscriptaccess="always" allowfullscreen="true"></embed>
   </object>
+  
   </div>
 </div>
 
-<p id="start">A short time ago in a browser very, very close&hellip;</p>
-
-<h1>STAR WARS<sub>titles in CSS3</sub></h1>
+<p id="start">Hace poco tiempo en una galaxia muy, muy cercana&hellip;</p>
 
 <div id="titles">
   <div id="titlecontent">
 
-    <p class="center">EPISODE III<br />
-      LA VENGANZA DE GINA</p>
+    <p class="center">EPISODIO III<br />
+      LA VENGANZA DE LA MAESTRA GINA</p>
 
     <p>Nuestra historia.</p>
 
     <p>Todo esto comienza con un grupo de estudiantes de la carrera de I.S.C quienes deben sobrevivir a los proyectos finales del semestre en línea.</p>
 
-    <p>Before movie-buffs start ranting, I realize Star Wars wasn't the first to use crawling 3D titles, but few of you will remember the Flash Gordon series or the 1936 adaption of HG Wells' "Things to Come".</p>
+    <p>Gracias a la pandemia del COVID-19, nuestra empresa Midnight Professional, se ha visto en la necesidad de cerrar tiendas físicas y abrirlas en línea.</p>
 
-    <p>Also, by mentioning "Star Wars", everyone will understand what I mean. And I'll receive several thousand more visits.</p>
+    <p>No obstante, hemos decidido que nuestros clientes son lo primero en esta galaxia, y de ahora en adelante les brindaremos un servicio sin igual. </p>
 
     <p>The scrolling titles work well in Chrome, Safari and Firefox. Opera doesn't implement 3D transforms yet, but the text will scroll. IE users receive a blank page. A shame, but IE10 should support it.</p>
 
@@ -84,13 +83,13 @@
 
     <p>All the code is contained in this single HTML file&hellip;</p>
 
-    <p class="center">View the source, Luke!</p>
+    <p class="center">Misión</p>
   
     <p>Sorry. Couldn't resist it.</p>
   
     <p>You're welcome to use this demonstration code in your own sites. Please link back to the original article at:</p>
 
-    <p class="center"><a href="http://www.sitepoint.com/css3-starwars-scrolling-text/">sitepoint.com/<br />css3-starwars-scrolling-text/</a></p>
+    <p class="center">Visión</p>
 
     <p>and give me a shout on Twitter <a href="https://twitter.com/craigbuckler">@craigbuckler</a> &ndash; I'd love to see how you use and abuse it!</p>
 
