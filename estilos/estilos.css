@@ -8,7 +8,7 @@ body{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%
+  width: 100%;
   top: 0;
 }
 ul {
@@ -194,9 +194,8 @@ header{
   }
   footer
   {
-    bottom: 0;
     width: 100%;
-    color: white;
+    color: #ffffff;
     padding: 0;
     margin-bottom: 0;
   }
@@ -227,7 +226,7 @@ header{
   color: white;
 }
 .linkpie:hover{
-  color: #979DAC;
+  color: #001835;
 }
 /*CArousel*/
 /* Slideshow container */
