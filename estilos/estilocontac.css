@@ -18,8 +18,6 @@ h4 {
     line-height: 1.5;
 }
 
-/* ///// inputs /////*/
-
 input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
     font-size: 0.75em;
     color: #999;
