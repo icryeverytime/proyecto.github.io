@@ -75,9 +75,9 @@ function showSlides(n) {
         <div class="content">
           <h2 style="text-align: center;">Encuentra todas las consolos de la nueva generacion</h2>
           <div style="text-align:center">
-            <img class="logoplay" src="img/playlogo.png" height="100px" width="100px" onmouseover="currentSlide(1)">
-            <img class="logonintendo" src="img/nintendo.png" height="100px" width="265px" onmouseover="currentSlide(2)">
-            <img class="logoxbox" src="img/xboxlogo.png" height="100px" width="100px" onmouseover="currentSlide(3)">
+            <img class="logoplay" src="img/playlogo.png" height="100px" width="100px" onclick="currentSlide(1)" onmouseover="currentSlide(1)">
+            <img class="logonintendo" src="img/nintendo.png" height="100px" width="265px" onclick="currentSlide(2)" onmouseover="currentSlide(2)">
+            <img class="logoxbox" src="img/xboxlogo.png" height="100px" width="100px" onclick="currentSlide(3)" onmouseover="currentSlide(3)">
           </div>
             <div class="slideshow-container">
 
@@ -93,6 +93,9 @@ function showSlides(n) {
                 <img src="img/xboxseriesx.jpg" style="width:100%">
               </div>
               
+              </div>
+              <div class="back">
+                <h2>Utiliza el codigo JPG12D43 para tener una oferta la ultima generacion</h2>
               </div>
               <br>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda laborum illum deleniti! Praesentium exercitationem voluptatem fugiat ratione assumenda repudiandae itaque ab inventore nobis sit libero dignissimos, velit incidunt ea nihil.
@@ -120,7 +123,7 @@ function showSlides(n) {
           </div>
           <div class="copyright">
             <div class="contenido">
-              <img src="img/pagos.png" alt=""><br><br>
+              <img id="banco" src="img/pagos.png" alt=""><br><br>
               Copyright © 2020 Midnight Professional
             </div>
           </div>
