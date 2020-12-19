@@ -96,6 +96,10 @@ header{
       justify-content: center;
       align-items: center;
     }
+    #banco{
+      width: 550px;
+      height: 69px;
+    }
   }
   
   /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -119,6 +123,10 @@ header{
     .pie{
       flex-direction: row;
       justify-content: space-evenly;
+    }
+    #banco{
+      width: 600px;
+      height: 75px;
     }
   }
   
@@ -144,6 +152,10 @@ header{
       flex-direction: row;
       justify-content: space-evenly;
     }
+    #banco{
+      width: 700px;
+      height: 88px;
+    }
   } 
   
   /* Large devices (laptops/desktops, 992px and up) */
@@ -168,8 +180,12 @@ header{
       flex-direction: row;
       justify-content: space-evenly;
     }
+    #banco{
+      width: 800px;
+      height: 100px;
+    }
   } 
-  
+
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
     .example {
@@ -190,6 +206,10 @@ header{
     }
     .pie{
       flex-direction: row;
+    }
+    #banco{
+      width: 800px;
+      height: 100px;
     }
   }
   footer
@@ -323,4 +343,11 @@ header{
 .logoxbox:hover{
   background-color: green;
 }
-
+.back{
+  background-image: url("viejageneracion.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
