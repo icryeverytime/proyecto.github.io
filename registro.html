@@ -111,17 +111,17 @@
       <script>
         function validar_registro()
         {
-            var pass1=document.getElementById("contra").value;
-            var pass2=document.getElementsById("confirmacion").value;
-            swal({title:"tres"});
-            if(pass1!=pass2)
+            let pass1=document.getElementById('contra').value;
+            let pass2=document.getElementById('confirmacion').value;
+            if(pass1==pass2)
             {
+                return true;
+            }
+            else{
                 swal({title:"Las contraseñas no son iguales", icon:"error"});
                 return false;
             }
-            else{
-                return true;
-            }
+        
         }
     </script>
 </body>
