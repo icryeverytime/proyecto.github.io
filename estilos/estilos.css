@@ -38,11 +38,10 @@ ul {
 li {
   float: left;
   border-right:1px solid #bbb;
+  height: 50.8px;
 }
 
-li:last-child {
-  border-right: none;
-}
+
 
   li a {
     display: block;
@@ -50,8 +49,9 @@ li:last-child {
     text-align: center;
     padding: 14px 16px;
     padding-top: 0;
+    height: 50.8px;
     text-decoration: none;
-    height: 40px;
+    
   }
 
 li a:hover:not(.active) {
@@ -379,4 +379,12 @@ header{
   margin-left: 50px;
   margin-right: 50px;
   background-image: url("consola.jpg");
+}
+#log{
+  background-color: #0466C8;
+  color: white;
+  border: none;
+  height: 50.8px;
+  width: 80px;
+  float: right;
 }

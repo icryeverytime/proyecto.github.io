@@ -20,17 +20,17 @@
                 </header>
                 <nav>
                     <ul>
-                        <li><a class="active" id="hide" href="index.html"><br>Inicio</a></li>
+                        <li><a id="hide" href="index.html"><br>Inicio</a></li>
                         <li><a href="aas.html" id="hide"><br>Tienda</a></li>
                         <li><a href="acercade.html" id="hide"><br>Acerca de</a></li>
-                        <li><a href="contact.php" id="hide"><br>Contáctanos</a></li>
+                        <li><a class="active" href="contact.php" id="hide"><br>Contáctanos</a></li>
                         <li><a href="about.asp" id="hide"><br>Ayuda</a></li>
-                        <li style="float:right;text-align: center;height: 50.8px;"><a href="login.html">Login</a></li>
+                        <li style="float: right;"> <button href="login.html" id="log">Login</li>
                         <li onclick="tres()">
                           <img src="img/menu.png" width="40px" height="40px" id="show">
                         </li>
-                        <li style="float:right;text-align: center;"><a href="login.html" ><img src="img/cart.png" width="31px" height="30px"></a></li>
-                      </ul> 
+                        <li style="float: right;"><a href="login.html" style="height: 50.8px;"><img src="img/cart.png" width="31px" height="40px"></a></li>
+                      </ul>
                 </nav> 
                 <div id="mostrar">
                   <a href=# id="muestra" onclick="dos()">X</a>
