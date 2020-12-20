@@ -346,7 +346,37 @@ header{
   background-image: url("viejageneracion.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 100%;
+  width:auto;
   height: auto;
   text-align: center;
+  color: yellow;
+}
+#butt{
+  background-color: #0466C8;
+  color: white;
+  font-size: larger;
+  border: none;
+  padding: 15px;
+}
+#suscripcion{
+  text-align: center;
+  color: white;
+}
+#cor{
+  width: 300px;
+  height: 40px;
+}
+#bot{
+  width: 300px;
+  height: 40px;
+  background-color: #0466C8;
+  color: white;
+}
+#lab{
+  font-size: large;
+}
+#suscripcion{
+  margin-left: 50px;
+  margin-right: 50px;
+  background-image: url("consola.jpg");
 }
