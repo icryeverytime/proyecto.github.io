@@ -214,3 +214,14 @@ h1 sub
 	0% { top: 100%; }
 	100% { top: -170%; }
 }
+
+#failure{
+	background-color: #0466C8;
+  color: white;
+  border: none;
+  height: 50.8px;
+  width: 80px;
+  float: right;
+  margin-right: -15px;
+  margin-left: -16px;
+}

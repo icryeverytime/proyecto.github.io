@@ -57,7 +57,7 @@ session_start();
 
 <header>
   <div id="navbar">
-    <header>
+    
       <a href="index.php">
         <img src="img/Logo2.png" class="img-centrar" id="head">
       </a>
@@ -76,11 +76,6 @@ session_start();
             onclick="document.getElementById('id01').style.display='block'">Login</button>
         </li>
         
-
-
-
-
-
 
         <li onclick="tres()">
           <img src="img/menu.png" width="40px" height="40px" id="show">
