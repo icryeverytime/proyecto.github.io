@@ -3,6 +3,8 @@
 }
 body{
   margin: 0px;
+  font-family: sans-serif;
+
 }
 .img-centrar{
   display: block;
@@ -388,30 +390,161 @@ header{
   width: 80px;
   float: right;
 }
-  .reg{
-    padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    color: white;
-    opacity: 1;
+
+
+
+
+
+
+
+
+/* -LOGIN- */
+
+/* Full-width input fields */
+logi input[type=text],logi input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+ logi button{
+  background-color: #0466C8;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+logi button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+logi .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+logi .imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+logi img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+logi .container {
+  padding: 16px;
+}
+
+logi span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+logi .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+logi .modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+logi .close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+logi .close:hover,
+logi .close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+logi .animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  logi span.psw {
+     display: block;
+     float: none;
   }
-  .fondo-registro{
-    background-image: url("control.jpg");
-    opacity: 0.6  ;
+  logi .cancelbtn {
+     width: 100%;
   }
-  .fondo-registro label{
-    text-decoration: underline;
-    color: white;
-    font-size: 26px;
-  }
-  .fondo-registro input{
-    width: 400px;
-    height: 40px;
-    text-align: center;
-    font-size: 22px;
-    margin-top: 10px;
-  }
-  .fondo-registro label:hover{
-    color: #0466C8;
-  }
+
+/* -FIN LOGIN- */
+
+.reg{
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+  opacity: 1;
+}
+.fondo-registro{
+  background-image: url("control.jpg");
+  opacity: 0.6  ;
+}
+.fondo-registro label{
+  text-decoration: underline;
+  color: white;
+  font-size: 26px;
+}
+.fondo-registro input{
+  width: 400px;
+  height: 40px;
+  text-align: center;
+  font-size: 22px;
+  margin-top: 10px;
+}
+.fondo-registro label:hover{
+  color: #0466C8;
+
+}
