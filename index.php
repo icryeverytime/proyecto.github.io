@@ -69,7 +69,7 @@ session_start();
         <li><a href="aas.php" id="hide"><br>Tienda</a></li>
         <li><a href="acercade.php" id="hide"><br>Acerca de</a></li>
         <li><a href="contact.php" id="hide"><br>Contáctanos</a></li>
-        <li><a href="about.asp" id="hide"><br>Ayuda</a></li>
+        <li><a href="faq.php" id="hide"><br>Ayuda</a></li>
 
         <li style="float: right;">
           <button href="index.php" id="log" role="button" class=""
@@ -95,7 +95,7 @@ session_start();
       <a href="aas.asp" id="muestra">Tienda</a>
       <a href="acercade.php" id="muestra">Acerca de</a>
       <a href="contact.php" id="muestra">Contáctanos</a>
-      <a href="about.asp" id="muestra">Ayuda</a>
+      <a href="faq.php" id="muestra">Ayuda</a>
     </div>
   </div>
 </header>
