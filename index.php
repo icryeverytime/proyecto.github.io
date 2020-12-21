@@ -54,42 +54,6 @@ session_start();
 
 <body>
 
-<<<<<<< Updated upstream
-<header>
-  <div id="navbar">
-    <header>
-      <a href="index.php">
-        <img src="img/Logo2.png" class="img-centrar" id="head">
-      </a>
-      <br>
-    </header>
-    <nav>
-      <ul>
-        <li><a class="active" id="hide" href="index.php"><br>Inicio</a></li>
-        <li><a href="tienda.php" id="hide"><br>Tienda</a></li>
-        <li><a href="acercade.php" id="hide"><br>Acerca de</a></li>
-        <li><a href="contact.php" id="hide"><br>Contáctanos</a></li>
-        <li><a href="faq.php" id="hide"><br>Ayuda</a></li>
-
-        <li style="float: right;">
-          <button href="index.php" id="log" role="button" class=""
-            onclick="document.getElementById('id01').style.display='block'">Login</button>
-        </li>
-        <li onclick="tres()">
-          <img src="img/menu.png" width="40px" height="40px" id="show">
-        </li>
-        <li style="float: right;"><a href="" style="height: 50.8px;"><img src="img/cart.png" width="31px"
-              height="40px"></a></li>
-      </ul>
-    </nav>
-    <div id="mostrar">
-      <a href=# id="muestra" onclick="dos()">X</a>
-      <a href="index.php" class="active" id="muestra" style="background-color:  #0466C8;">Inicio</a>
-      <a href="tienda.php" id="muestra">Tienda</a>
-      <a href="acercade.php" id="muestra">Acerca de</a>
-      <a href="contact.php" id="muestra">Contáctanos</a>
-      <a href="faq.php" id="muestra">Ayuda</a>
-=======
   <header>
     <div id="navbar">
       <header>
@@ -132,7 +96,6 @@ session_start();
         <a href="contact.php" id="muestra">Contáctanos</a>
         <a href="about.asp" id="muestra">Ayuda</a>
       </div>
->>>>>>> Stashed changes
     </div>
   </header>
 
