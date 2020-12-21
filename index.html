@@ -53,6 +53,8 @@ session_start();
 </head>
 
 <body>
+
+<header>
   <div id="navbar">
     <header>
       <a href="index.html">
@@ -67,14 +69,12 @@ session_start();
         <li><a href="acercade.html" id="hide"><br>Acerca de</a></li>
         <li><a href="contact.php" id="hide"><br>Contáctanos</a></li>
         <li><a href="about.asp" id="hide"><br>Ayuda</a></li>
+
         <li style="float: right;">
           <button href="" id="log" role="button" class=""
-            onclick="document.getElementById('id01').style.display='block'">Login </button>
+            onclick="document.getElementById('id01').style.display='block'">Login</button>
         </li>
-        <li style="float: right;">
-          <button href="registro.html" id="log" role="button" class="">Signup</button>
-        </li>  
-
+        
 
 
 
@@ -97,6 +97,8 @@ session_start();
       <a href="about.asp" id="muestra">Ayuda</a>
     </div>
   </div>
+</header>
+
   <div class="content">
     <h2 style="text-align: center;">Encuentra todas las consolas de la nueva generación</h2>
     <div style="text-align:center">
@@ -269,7 +271,7 @@ session_start();
       <div class="container" style="background-color:#f1f1f1">
         <button type="button" onclick="document.getElementById('id01').style.display='none'"
           class="cancelbtn logi">Cancelar</button>
-        <span class="psw">No tienes cuenta? <a href="registro.php">Registrate</a></span>
+        <span class="psw">No tienes cuenta? <a href="registro.html">Registrate</a></span>
       </div>
     </form>
   </div>
