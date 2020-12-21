@@ -15,20 +15,20 @@
 <header>
   <div id="navbar">
     <header>
-      <a href="index.html">
+      <a href="index.php">
         <img src="img/Logo2.png" class="img-centrar" id="head">
       </a>
       <br>
     </header>
     <nav>
       <ul>
-        <li><a class="active" id="hide" href="index.html"><br>Inicio</a></li>
-        <li><a href="aas.html" id="hide"><br>Tienda</a></li>
-        <li><a href="acercade.html" id="hide"><br>Acerca de</a></li>
+        <li><a class="active" id="hide" href="index.php"><br>Inicio</a></li>
+        <li><a href="aas.php" id="hide"><br>Tienda</a></li>
+        <li><a href="acercade.php" id="hide"><br>Acerca de</a></li>
         <li><a href="contact.php" id="hide"><br>Contáctanos</a></li>
         <li><a href="about.asp" id="hide"><br>Ayuda</a></li>
         <li style="float: right;">
-          <button href="registro.html" id="log" role="button" class="">Signup</button>
+          <button href="registro.php" id="log" role="button" class="">Signup</button>
         </li>  
 
         <li style="float: right;">
@@ -46,9 +46,9 @@
     </nav>
     <div id="mostrar">
       <a href=# id="muestra" onclick="dos()">X</a>
-      <a href="index.html" class="active" id="muestra" style="background-color:  #0466C8;">Inicio</a>
+      <a href="index.php" class="active" id="muestra" style="background-color:  #0466C8;">Inicio</a>
       <a href="aas.asp" id="muestra">Tienda</a>
-      <a href="acercade.html" id="muestra">Acerca de</a>
+      <a href="acercade.php" id="muestra">Acerca de</a>
       <a href="contact.php" id="muestra">Contáctanos</a>
       <a href="about.asp" id="muestra">Ayuda</a>
     </div>
