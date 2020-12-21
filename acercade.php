@@ -22,7 +22,7 @@
     </header>
     <nav>
       <ul>
-        <li><a class="active" id="hide" href="index.php"><br>Inicio</a></li>
+        <li><a id="hide" href="index.php"><br>Inicio</a></li>
         <li><a href="aas.php" id="hide"><br>Tienda</a></li>
         <li><a href="acercade.php" class="active" id="hide"><br>Acerca de</a></li>
         <li><a href="contact.php" id="hide"><br>Contáctanos</a></li>
@@ -147,15 +147,15 @@
 
       <div class="container">
         <form method="POST">
-        <label for="uname"><b>Nombre de usuario</b></label>
+        <label for="uname" style="color: black;"><b>Nombre de usuario</b></label>
         <input type="text" placeholder="Usuario" id="usuario" name="usuario" required>
 
-        <label for="psw"><b>Contraseña</b></label>
+        <label for="psw"  style="color: black;"><b>Contraseña</b></label>
         <input type="password" placeholder="123" name="contraseña" required>
 
         <button type="submit" onclick="validar.php">Login</button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Recordarme
+        <label  style="color: black;" >
+          <input type="checkbox" checked="checked" name="remember" > Recordarme
         </label>
         </form>
       </div>
@@ -163,7 +163,7 @@
       <div class="container" style="background-color:#f1f1f1">
         <button type="button" onclick="document.getElementById('id01').style.display='none'"
           class="cancelbtn">Cancelar</button>
-        <span class="psw">No tienes cuenta? <a href="registro.php">Registrate</a></span>
+        <span class="psw"  style="color: black;">No tienes cuenta? <a href="registro.php">Registrate</a></span>
       </div>
     </form>
   </div>
