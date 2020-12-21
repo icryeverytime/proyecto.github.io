@@ -517,7 +517,7 @@ logi .animate {
   logi .cancelbtn {
      width: 100%;
   }
-
+}
 /* -FIN LOGIN- */
 
 .reg{
@@ -548,4 +548,3 @@ logi .animate {
   color: #0466C8;
 
 }
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
