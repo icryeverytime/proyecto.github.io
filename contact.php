@@ -24,7 +24,7 @@
                         <li><a href="aas.html" id="hide"><br>Tienda</a></li>
                         <li><a href="acercade.html" id="hide"><br>Acerca de</a></li>
                         <li><a class="active" href="contact.php" id="hide"><br>Contáctanos</a></li>
-                        <li><a href="about.asp" id="hide"><br>Ayuda</a></li>
+                        <li><a href="faq.html" id="hide"><br>Ayuda</a></li>
                         <li style="float: right;"> <button href="login.html" id="log">Login</li>
                         <li onclick="tres()">
                           <img src="img/menu.png" width="40px" height="40px" id="show">
@@ -38,7 +38,7 @@
                   <a href="aas.asp" id="muestra">Tienda</a>
                   <a href="acercade.html" id="muestra">Acerca de</a>
                   <a href="contact.php" id="muestra">Contáctanos</a>
-                  <a href="about.asp" id="muestra">Ayuda</a>
+                  <a href="faq.html" id="muestra">Ayuda</a>
                 </div>
         </div>
         <div class="container">
@@ -85,7 +85,7 @@
           <div class="pie">
              <div>
                <h2>Sobre nosotros</h2>
-               <a href="acercade.php" class="linkpie">Más información</a>
+               <a href="acercade.html" class="linkpie">Más información</a>
              </div>
              <div>
                <h2>Síganos</h2>

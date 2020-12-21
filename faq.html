@@ -6,40 +6,18 @@
         <title>Pagina Principal</title>
         <link rel="shortcut icon" href="img/favicon.ico"/>
         <link rel="stylesheet" href="estilos/estilos.css"/>
-
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="estilos/faq.css">
+        <script src="https://kit.fontawesome.com/cebbaaaaab.js" crossorigin="anonymous"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://kit.fontawesome.com/cebbaaaaab.js" crossorigin="anonymous"></script>
         <script src="js/funciones.js"></script>
 
 
-      <script>
-        var Index=0;
-        var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var xbox=document.getElementsByClassName("logoxbox");
-  var play=document.getElementsByClassName("logoplay");
-  var nintendo=document.getElementsByClassName("logonintendo");  
-  var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-
-      </script>
+  
     </head>
     <body>
         <div id="navbar">
@@ -72,48 +50,101 @@ function showSlides(n) {
                   <a href="faq.html" id="muestra">Ayuda</a>
                 </div>
         </div>
-        <div class="content">
-          <h2 style="text-align: center;">Encuentra todas las consolas de la nueva generacion</h2>
-          <div style="text-align:center">
-            <img class="logoplay" src="img/playlogo.png" height="100px" width="100px" onclick="currentSlide(1)" onmouseover="currentSlide(1)">
-            <img class="logonintendo" src="img/nintendo.png" height="100px" width="265px" onclick="currentSlide(2)" onmouseover="currentSlide(2)">
-            <img class="logoxbox" src="img/xboxlogo.png" height="100px" width="100px" onclick="currentSlide(3)" onmouseover="currentSlide(3)">
-          </div>
-            <div class="slideshow-container">
+        <section class="accordion-section clearfix mt-3" aria-label="Question Accordions">
+            <div class="container">
+            
+                <h2>Preguntas Frecuentes</h2>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading p-3 mb-3" role="tab" id="heading0">
+                      <h3 class="panel-title">
+                        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                          ¿Cuánto tiempo llevan como empresa?
+                        </a>
+                      </h3>
+                    </div>
+                    <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+                      <div class="panel-body px-3 mb-4">
+                        <p>With Solodev CMS, you and your visitors will benefit from a finely-tuned technology stack that drives the highest levels of site performance, speed and engagement - and contributes more to your bottom line. Our users fell in love with:</p>
+                        <ul>
+                          <li>Light speed deployment on the most secure and stable cloud infrastructure available on the market.</li>
+                          <li>Scalability – pay for what you need today and add-on options as you grow.</li>
+                          <li>All of the bells and whistles of other enterprise CMS options but without the design limitations - this CMS simply lets you realize your creative visions.</li>
+                          <li>Amazing support backed by a team of Solodev pros – here when you need them.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="panel panel-default">
+                    <div class="panel-heading p-3 mb-3" role="tab" id="heading1">
+                      <h3 class="panel-title">
+                        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                          ¿Sus productos son nuevos?
+                        </a>
+                      </h3>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                      <div class="panel-body px-3 mb-4">
+                        <p>Building a website is extremely easy. With a working knowledge of HTML and CSS you will be able to have a site up and running in no time.</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="panel panel-default">
+                    <div class="panel-heading p-3 mb-3" role="tab" id="heading2">
+                      <h3 class="panel-title">
+                        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                          ¿Cuentan con garantía?
+                        </a>
+                      </h3>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                      <div class="panel-body px-3 mb-4">
+                        <p>Using Amazon AWS technology which is an industry leader for reliability you will be able to experience an uptime in the vicinity of 99.95%.</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="panel panel-default">
+                    <div class="panel-heading p-3 mb-3" role="tab" id="heading3">
+                      <h3 class="panel-title">
+                        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                          ¿Qué métodos de pago aceptan?
+                        </a>
+                      </h3>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                      <div class="panel-body px-3 mb-4">
+                        <p>Yes, Solodev CMS is built to handle the needs of any size company. With our Multi-Site Management, you will be able to easily manage all of your websites.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+            </div>
+          </section>
 
-              <div class="mySlides fade" style="display: inline-block;">
-                <img src="img/ps5.jpg" style="width:100%">
-              </div>
-              
-              <div class="mySlides fade">
-                <img src="img/switch.jpg" style="width:100%">
-              </div>
-              
-              <div class="mySlides fade">
-                <img src="img/xboxseriesx.jpg" style="width:100%">
-              </div>
-              
-              </div>
-              <div class="back">
-                <br><br><br><br><br>
-                <button id="butt">Utiliza el codigo JPG12D43 para 10% de descuento sobre los productos de la ultima generacion</button>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <button id="butt">Ir a tienda</button>
-                <br><br>
-              </div>
-              <br> 
-              <div id="suscripcion">
-                <br><br>
-                <h2>Unete a nuestra lista de correo y seras primero en conocer lo nuevo</h2>
-                <form action="" id="unate">
-                  <label for="cor" id="lab">Correo:</label><br><br>
-                  <input type="email" id="cor" name="cor" placeholder="Direccion de correo" required="" oninvalid="this.setCustomValidity('Por favor ingrese correo valido')" oninput="setCustomValidity('')"><br><br>
-                  <input id="bot" type="submit" value="Suscribete ahora">
-                  <br><br><br><br>
-                </form>
-              </div>
-              <br><br><br>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <footer>
           <div class="pie">
              <div>
