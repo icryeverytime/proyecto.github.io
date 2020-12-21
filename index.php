@@ -54,7 +54,7 @@ session_start();
 
 <body>
 
-<<<<<<< Updated upstream
+
 <header>
   <div id="navbar">
     <header>
@@ -72,8 +72,14 @@ session_start();
         <li><a href="faq.php" id="hide"><br>Ayuda</a></li>
 
         <li style="float: right;">
-          <button href="index.php" id="log" role="button" class=""
+        
+          
+        <button href="index.php" id="log" role="button" class=""
             onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+
+
+            
         </li>
         
 
@@ -96,52 +102,13 @@ session_start();
       <a href="acercade.php" id="muestra">Acerca de</a>
       <a href="contact.php" id="muestra">Contáctanos</a>
       <a href="faq.php" id="muestra">Ayuda</a>
-=======
-  <header>
-    <div id="navbar">
-      <header>
-        <a href="index.php">
-          <img src="img/Logo2.png" class="img-centrar" id="head">
-        </a>
-        <br>
-      </header>
-      <nav>
-        <ul>
-          <li><a class="active" id="hide" href="index.php"><br>Inicio</a></li>
-          <li><a href="aas.php" id="hide"><br>Tienda</a></li>
-          <li><a href="acercade.php" id="hide"><br>Acerca de</a></li>
-          <li><a href="contact.php" id="hide"><br>Contáctanos</a></li>
-          <li><a href="about.asp" id="hide"><br>Ayuda</a></li>
 
-          <li style="float: right;">
-            <button href="index.php" id="log" role="button" class=""
-              onclick="document.getElementById('id01').style.display='block'">Login</button>
-          </li>
-
-
-
-
-
-
-
-          <li onclick="tres()">
-            <img src="img/menu.png" width="40px" height="40px" id="show">
-          </li>
-          <li style="float: right;"><a href="" style="height: 50.8px;"><img src="img/cart.png" width="31px"
-                height="40px"></a></li>
-        </ul>
-      </nav>
-      <div id="mostrar">
-        <a href=# id="muestra" onclick="dos()">X</a>
-        <a href="index.php" class="active" id="muestra" style="background-color:  #0466C8;">Inicio</a>
-        <a href="aas.asp" id="muestra">Tienda</a>
-        <a href="acercade.php" id="muestra">Acerca de</a>
-        <a href="contact.php" id="muestra">Contáctanos</a>
-        <a href="about.asp" id="muestra">Ayuda</a>
-      </div>
->>>>>>> Stashed changes
     </div>
   </header>
+
+<div style="text-align: center; color: #FFF; display: flex; flex-direction: column; align-items: center; justify-content: center;  letter-spacing: 1px;">
+ <h1 style="background-image:url(https://media.giphy.com/media/3ornjHyjf1FiUneGGI/giphy.gif); background-size: cover; color: transparent; -moz-background-clip: text; -webkit-background-clip:text; text-transform: uppercase; font-size: 100px; line-height: .75; margin:10px 0;">it's all<br/>about<br/>gaming</h1>
+</div>
 
   <div class="content">
     <h2 style="text-align: center;">Encuentra todas las consolas de la nueva generación</h2>
@@ -173,16 +140,16 @@ session_start();
       <button id="butt">Utiliza el codigo JPG12D43 para 10% de descuento sobre los productos de la ultima
         generacion</button>
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <button id="butt">Ir a tienda</button>
+      <button id="butt" onclick="location.href='tienda.php';">Ir a tienda</button>
       <br><br>
     </div>
     <br>
     <div id="suscripcion">
       <br><br>
       <h2>Unete a nuestra lista de correo y seras primero en conocer lo nuevo</h2>
-      <form action="" id="unate">
+      <form action="promocion/enviar-correo.php" id="unate" method="post">
         <label for="cor" id="lab">Correo:</label><br><br>
-        <input type="email" id="cor" name="cor" placeholder="Direccion de correo" required=""
+        <input type="email" id="cor" name="email" placeholder="Direccion de correo" required=""
           oninvalid="this.setCustomValidity('Por favor ingrese correo valido')" oninput="setCustomValidity('')"><br><br>
         <input id="bot" type="submit" value="Suscribete ahora">
         <br><br><br><br>
@@ -331,7 +298,7 @@ session_start();
         <div class="container" style="background-color:#f1f1f1">
           <button type="button" onclick="document.getElementById('id01').style.display='none'"
             class="cancelbtn">Cancelar</button>
-          <span class="psw">No tienes cuenta? <a href="registro.php">Registrate</a></span>
+          <span class="psw">No tienes cuenta? <a href="registro.html">Registrate</a></span>
         </div>
       </form>
     </div>

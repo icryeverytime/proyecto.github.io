@@ -6,7 +6,9 @@
     <title>Admin</title>
     <link rel="shortcut icon" href="img/favicon.ico"/>
     <link rel="stylesheet" href="estilos/estilos.css"/>
+
     <link rel="stylesheet" href="estilos/faq.css">
+
 </head>
 <body>
 <body>
@@ -43,6 +45,7 @@
                 </div>
         </div>
     <div id="content">
+
     <div id="faq" class="faq-body" style="text-align:center;">
     <div class="faq-header">
       <h3 class="faq-title">Bienvendio Admin elige la opcion que quiere realizar</h3>
@@ -116,6 +119,7 @@
     </div>
   </div>
     <br><br><br><br><br><br><br>
+
     </div>
     <footer>
     <div class="pie">

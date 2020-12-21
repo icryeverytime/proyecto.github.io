@@ -517,7 +517,7 @@ logi .animate {
   logi .cancelbtn {
      width: 100%;
   }
-
+}
 /* -FIN LOGIN- */
 
 .reg{
@@ -544,7 +544,6 @@ logi .animate {
   font-size: 22px;
   margin-top: 10px;
 }
-.fondo-registro label:hover{
+ .fondo-registro label:hover{
   color: #0466C8;
-
 }
