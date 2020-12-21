@@ -12,7 +12,7 @@ session_start();
   <title>Pagina Principal</title>
   <link rel="shortcut icon" href="img/favicon.ico" />
   <link rel="stylesheet" href="estilos/estilos.css" />
-  
+
 
   <script src="https://kit.fontawesome.com/cebbaaaaab.js" crossorigin="anonymous"></script>
   <script src="js/funciones.js"></script>
@@ -54,6 +54,7 @@ session_start();
 
 <body>
 
+<<<<<<< Updated upstream
 <header>
   <div id="navbar">
     <header>
@@ -95,9 +96,52 @@ session_start();
       <a href="acercade.php" id="muestra">Acerca de</a>
       <a href="contact.php" id="muestra">Contáctanos</a>
       <a href="faq.php" id="muestra">Ayuda</a>
+=======
+  <header>
+    <div id="navbar">
+      <header>
+        <a href="index.php">
+          <img src="img/Logo2.png" class="img-centrar" id="head">
+        </a>
+        <br>
+      </header>
+      <nav>
+        <ul>
+          <li><a class="active" id="hide" href="index.php"><br>Inicio</a></li>
+          <li><a href="aas.php" id="hide"><br>Tienda</a></li>
+          <li><a href="acercade.php" id="hide"><br>Acerca de</a></li>
+          <li><a href="contact.php" id="hide"><br>Contáctanos</a></li>
+          <li><a href="about.asp" id="hide"><br>Ayuda</a></li>
+
+          <li style="float: right;">
+            <button href="index.php" id="log" role="button" class=""
+              onclick="document.getElementById('id01').style.display='block'">Login</button>
+          </li>
+
+
+
+
+
+
+
+          <li onclick="tres()">
+            <img src="img/menu.png" width="40px" height="40px" id="show">
+          </li>
+          <li style="float: right;"><a href="" style="height: 50.8px;"><img src="img/cart.png" width="31px"
+                height="40px"></a></li>
+        </ul>
+      </nav>
+      <div id="mostrar">
+        <a href=# id="muestra" onclick="dos()">X</a>
+        <a href="index.php" class="active" id="muestra" style="background-color:  #0466C8;">Inicio</a>
+        <a href="aas.asp" id="muestra">Tienda</a>
+        <a href="acercade.php" id="muestra">Acerca de</a>
+        <a href="contact.php" id="muestra">Contáctanos</a>
+        <a href="about.asp" id="muestra">Ayuda</a>
+      </div>
+>>>>>>> Stashed changes
     </div>
-  </div>
-</header>
+  </header>
 
   <div class="content">
     <h2 style="text-align: center;">Encuentra todas las consolas de la nueva generación</h2>
@@ -259,50 +303,50 @@ session_start();
 
 
 
-<logi>
-  <div id="id01" class="modal">
-  
-    <form class="modal-content animate" action="validar.php" method="post">
-      <div class="imgcontainer">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close"
-          title="Close Modal">&times;</span>
-        <img src="img/logologin.png" alt="Avatar" class="avatar" width="50px" height="50px">
-      </div>
+  <logi>
+    <div id="id01" class="modal">
 
-      <div class="container">
-        <form method="POST">
-        <label for="uname"><b>Nombre de usuario</b></label>
-        <input type="text" placeholder="Usuario" id="usuario" name="usuario" required>
+      <form class="modal-content animate" action="validar.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+          <img src="img/logologin.png" alt="Avatar" class="avatar" width="50px" height="50px">
+        </div>
 
-        <label for="psw"><b>Contraseña</b></label>
-        <input type="password" placeholder="123" name="contraseña" required>
+        <div class="container">
+          <form method="POST">
+            <label for="uname"><b>Nombre de usuario</b></label>
+            <input type="text" placeholder="Usuario" id="usuario" name="usuario" required>
 
-        <button type="submit" onclick="validar.php">Login</button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Recordarme
-        </label>
-        </form>
-      </div>
+            <label for="psw"><b>Contraseña</b></label>
+            <input type="password" placeholder="123" name="contraseña" required>
 
-      <div class="container" style="background-color:#f1f1f1">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'"
-          class="cancelbtn">Cancelar</button>
-        <span class="psw">No tienes cuenta? <a href="registro.php">Registrate</a></span>
-      </div>
-    </form>
-  </div>
-<logi>
-  <script>
-// Get the modal
-var modal = document.getElementById('id01');
+            <button type="submit" onclick="validar.php">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Recordarme
+            </label>
+          </form>
+        </div>
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn">Cancelar</button>
+          <span class="psw">No tienes cuenta? <a href="registro.php">Registrate</a></span>
+        </div>
+      </form>
+    </div>
+    <logi>
+      <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script>
 
 
 </body>
