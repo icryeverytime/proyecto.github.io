@@ -74,12 +74,12 @@ session_start();
         <li style="float: right;">
         
           
-        <button href="index.php" id="log" role="button" class=""
+        <button id="log" role="button" class=""
             onclick="document.getElementById('id01').style.display='block'">Login</button>
 
 
 
-            
+          
         </li>
         
 
@@ -268,52 +268,48 @@ session_start();
 
 
 
+<logi>
 
-
-  <logi>
-    <div id="id01" class="modal">
-
-      <form class="modal-content animate" action="validar.php" method="post">
-        <div class="imgcontainer">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
-          <img src="img/logologin.png" alt="Avatar" class="avatar" width="50px" height="50px">
-        </div>
-
-        <div class="container">
-          <form method="POST">
-            <label for="uname"><b>Nombre de usuario</b></label>
-            <input type="text" placeholder="Usuario" id="usuario" name="usuario" required>
-
-            <label for="psw"><b>Contraseña</b></label>
-            <input type="password" placeholder="123" name="contraseña" required>
-
-            <button type="submit" onclick="validar.php">Login</button>
-            <label>
-              <input type="checkbox" checked="checked" name="remember"> Recordarme
-            </label>
-          </form>
-        </div>
-
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'"
-            class="cancelbtn">Cancelar</button>
-          <span class="psw">No tienes cuenta? <a href="registro.html">Registrate</a></span>
-        </div>
-      </form>
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="validar.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img/logologin.png" alt="Avatar" class="avatar">
     </div>
-    <logi>
-      <script>
-        // Get the modal
-        var modal = document.getElementById('id01');
 
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
-          }
-        }
-      </script>
+    <div class="container">
+      <label for="uname"><b>Usuario</b></label>
+      <input type="text" placeholder="Nombre de usuario" name="usuario" required>
+
+      <label for="psw"><b>Contraseña</b></label>
+      <input type="password" placeholder="Ingrese contraseña" name="contraseña" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Recordarme
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+      <span class="psw">No tienes cuenta? <a href="registro.html">Suscribete</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</logi>
 
 
 </body>
