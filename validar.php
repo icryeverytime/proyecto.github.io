@@ -37,9 +37,11 @@ while($row=$resultado->fetch_assoc())
     if($contra==$contraseña)
     {
         echo "adentro";
+        header("Location: index.html");
     }
     else{
-        echo "no adentro0";
+        echo "no adentro";
+
     }
 }
 

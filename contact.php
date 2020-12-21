@@ -12,7 +12,7 @@
     </head>
     <body>
         
-<header>
+    <header>
   <div id="navbar">
     <header>
       <a href="index.php">
@@ -27,15 +27,17 @@
         <li><a href="acercade.php" id="hide"><br>Acerca de</a></li>
         <li><a href="contact.php" id="hide"><br>Contáctanos</a></li>
         <li><a href="about.asp" id="hide"><br>Ayuda</a></li>
-        <li style="float: right;">
-          <button href="registro.php" id="log" role="button" class="">Signup</button>
-        </li>  
 
         <li style="float: right;">
-          <button href="" id="log" role="button" class=""
-            onclick="document.getElementById('id01').style.display='block'">Login </button>
+          <button href="index.php" id="log" role="button" class=""
+            onclick="document.getElementById('id01').style.display='block'">Login</button>
         </li>
         
+
+
+
+
+
 
         <li onclick="tres()">
           <img src="img/menu.png" width="40px" height="40px" id="show">
@@ -122,35 +124,50 @@
 
 
 
-        <div id="id01" class="modal">
+        <logi>
+  <div id="id01" class="modal">
+  
+    <form class="modal-content animate" action="validar.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="img/logologin.png" alt="Avatar" class="avatar" width="50px" height="50px">
+      </div>
 
-<form class="modal-content animate" action="login.php" method="post">
-  <div class="imgcontainer">
-    <span onclick="document.getElementById('id01').style.display='none'" class="close"
-      title="Close Modal">&times;</span>
-    <img src="img/logologin.png" alt="Avatar" class="avatar" width="50px" height="50px">
+      <div class="container">
+        <form method="POST">
+        <label for="uname"><b>Nombre de usuario</b></label>
+        <input type="text" placeholder="Usuario" id="usuario" name="usuario" required>
+
+        <label for="psw"><b>Contraseña</b></label>
+        <input type="password" placeholder="123" name="contraseña" required>
+
+        <button type="submit" onclick="validar.php">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Recordarme
+        </label>
+        </form>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+          class="cancelbtn">Cancelar</button>
+        <span class="psw">No tienes cuenta? <a href="registro.php">Registrate</a></span>
+      </div>
+    </form>
   </div>
+<logi>
+  <script>
+// Get the modal
+var modal = document.getElementById('id01');
 
-  <div class="container">
-    <label for="uname"><b>Nombre de usuario</b></label>
-    <input type="text" placeholder="Usuario" name="usuario" required>
-
-    <label for="psw"><b>Contraseña</b></label>
-    <input type="password" placeholder="123" name="palabra_secreta" required>
-
-    <button type="submit" class="logi">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Recordarme
-    </label>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" onclick="document.getElementById('id01').style.display='none'"
-      class="cancelbtn logi">Cancelar</button>
-    <span class="psw">No tienes cuenta? <a href="registro.php">Registrate</a></span>
-  </div>
-</form>
-</div>
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
 
 
