@@ -140,9 +140,9 @@ session_start();
     <div id="suscripcion">
       <br><br>
       <h2>Unete a nuestra lista de correo y seras primero en conocer lo nuevo</h2>
-      <form action="" id="unate">
+      <form action="promocion/enviar-correo.php" id="unate" method="post">
         <label for="cor" id="lab">Correo:</label><br><br>
-        <input type="email" id="cor" name="cor" placeholder="Direccion de correo" required=""
+        <input type="email" id="cor" name="email" placeholder="Direccion de correo" required=""
           oninvalid="this.setCustomValidity('Por favor ingrese correo valido')" oninput="setCustomValidity('')"><br><br>
         <input id="bot" type="submit" value="Suscribete ahora">
         <br><br><br><br>
