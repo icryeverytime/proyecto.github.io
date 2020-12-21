@@ -516,31 +516,30 @@ span.psw {
      width: 100%;
   }
 
-.reg{
-  padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  color: white;
-  opacity: 1;
-}
-.fondo-registro{
-  background-image: url("control.jpg");
-  opacity: 0.6  ;
-}
-.fondo-registro label{
-  text-decoration: underline;
-  color: white;
-  font-size: 26px;
-}
-.fondo-registro input{
-  width: 400px;
-  height: 40px;
-  text-align: center;
-  font-size: 22px;
-  margin-top: 10px;
-}
-.fondo-registro label:hover{
-  color: #0466C8;
-
-}
+  .reg{
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    opacity: 1;
+  }
+  .fondo-registro{
+    background-image: url("control.jpg");
+    opacity: 0.6  ;
+  }
+  .fondo-registro label{
+    text-decoration: underline;
+    color: white;
+    font-size: 26px;
+  }
+  .fondo-registro input{
+    width: 400px;
+    height: 40px;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 10px;
+  }
+  .fondo-registro label:hover{
+    color: #0466C8;
+  }
