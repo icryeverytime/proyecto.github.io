@@ -56,7 +56,7 @@
     </div>
   </div>
 </header>
-
+<contacto>
         <div class="container">
 	<div class="row">
 			<h1>Contáctanos</h1>
@@ -96,7 +96,7 @@
       </form>
 	</div>
 </div>
-
+</contacto>
         <footer>
           <div class="pie">
              <div>
