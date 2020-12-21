@@ -90,7 +90,11 @@ session_start();
       <a href="aas.asp" id="muestra">Tienda</a>
       <a href="acercade.php" id="muestra">Acerca de</a>
       <a href="contact.php" id="muestra">Contáctanos</a>
+<<<<<<< Updated upstream
       <a href="about.asp" id="muestra">Ayuda</a>
+=======
+      <a href="faq.php" id="muestra">Ayuda</a>
+>>>>>>> Stashed changes
     </div>
   </div>
 </header>
