@@ -34,10 +34,10 @@
                 </nav> 
                 <div id="mostrar">
                   <a href=# id="muestra" onclick="dos()">X</a>
-                  <a href="index.html" class="active" id="muestra" style="background-color:  #0466C8;">Inicio</a>
+                  <a href="index.html" id="muestra" style="background-color:  #0466C8;">Inicio</a>
                   <a href="aas.asp" id="muestra">Tienda</a>
                   <a href="acercade.html" id="muestra">Acerca de</a>
-                  <a href="contact.php" id="muestra">Contáctanos</a>
+                  <a href="contact.php" class="active" id="muestra">Contáctanos</a>
                   <a href="faq.html" id="muestra">Ayuda</a>
                 </div>
         </div>
