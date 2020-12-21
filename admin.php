@@ -2,11 +2,16 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin</title>
-  <link rel="shortcut icon" href="img/favicon.ico" />
-  <link rel="stylesheet" href="estilos/estilos.css" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <link rel="stylesheet" href="estilos/estilos.css"/>
+
+    <link rel="stylesheet" href="estilos/faq.css">
+
+
 </head>
 
 <body>
@@ -52,13 +57,82 @@
       </div>
     </div>
     <div id="content">
-      <h1 style="">Bienvendio admin al sistema elige una opcion</h1>
-      <form>
-      </form>
-      <form>
-      </form>
-      <form>
-      </form>
+
+
+    <div id="faq" class="faq-body" style="text-align:center;">
+    <div class="faq-header">
+      <h3 class="faq-title">Bienvendio Admin elige la opcion que quiere realizar</h3>
+      <div class="seperator"></div>
+      <div class="faq-list">
+        <div>
+          <details>
+            <summary title="Agregar productos">Agregar productos</summary>
+            <p class="faq-content">
+                <form>
+                    <label for="nombre">Nombre de producto:</label>
+                    <br>
+                    <input type="text" id="nombre" name="nombre">
+                    <br>
+                    <br>
+                    <label for="descripcion">Descripcion del producto:</label>
+                    <br>
+                    <textarea id="descripcion" name="descripcion" rows="4" columns="50"></textarea>
+                    <br><br>
+                    <label for="precio">Precio del producto:</label>
+                    <br>
+                    <input type="number" id="precio" name="precio" min="1">
+                    <br>
+                    <br>
+                    <label for="Estado">Estado del producto</label>
+                    <br>
+                    <input type="number" id="Estado" name="Estado" min="1" max="2">
+                    <br><br>
+                    <input type="submit" value="Agregar producto">
+                </form>
+            </p>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary title="Actualizar productos">Actualizar productos</summary>
+            <p class="faq-content">
+              <form>
+                <label for="nombreActu">Nombre de producto a actualizar:</label>
+          
+                <input type="text" id="nombreActu" name="nombreActu">
+                <br><br>
+                <input type="submit" value="Actualizar producto">
+            </form>
+            </p>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary title="Borrar productos">Borrar productos</summary>
+            <p class="faq-content">
+            <form>
+                <label for="nombreEli">Nombre de producto a eliminar:</label>
+          
+                <input type="text" id="nombreEli" name="nombreEli">
+                <br><br>
+                <input type="submit" value="Eliminar producto">
+            </form>
+            </p>
+          </details>
+        </div>
+        <div>
+          <details>
+            <summary title="Grafica">Grafica</summary>
+            <p class="faq-content">
+              <input type="submit" value="Grafica">
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+    <br><br><br><br><br><br><br>
+
 
     </div>
     <footer>
