@@ -248,7 +248,7 @@ session_start();
 
   <div id="id01" class="modal">
 
-    <form class="modal-content animate" action="login.php" method="post">
+    <form class="modal-content animate" action="validar.php" method="post">
       <div class="imgcontainer">
         <span onclick="document.getElementById('id01').style.display='none'" class="close"
           title="Close Modal">&times;</span>
@@ -256,16 +256,18 @@ session_start();
       </div>
 
       <div class="container">
+        <form method="POST">
         <label for="uname"><b>Nombre de usuario</b></label>
-        <input type="text" placeholder="Usuario" name="usuario" required>
+        <input type="text" placeholder="Usuario" id="usuario" name="usuario" required>
 
         <label for="psw"><b>Contraseña</b></label>
-        <input type="password" placeholder="123" name="palabra_secreta" required>
+        <input type="password" placeholder="123" name="contraseña" required>
 
         <button type="submit" class="logi" onclick="validar.php">Login</button>
         <label>
           <input type="checkbox" checked="checked" name="remember"> Recordarme
         </label>
+        </form>
       </div>
 
       <div class="container" style="background-color:#f1f1f1">
