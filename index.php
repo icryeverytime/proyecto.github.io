@@ -99,6 +99,10 @@ session_start();
     </div>
   </header>
 
+<div style="text-align: center; color: #FFF; display: flex; flex-direction: column; align-items: center; justify-content: center;  letter-spacing: 1px;">
+ <h1 style="background-image:url(https://media.giphy.com/media/3ornjHyjf1FiUneGGI/giphy.gif); background-size: cover; color: transparent; -moz-background-clip: text; -webkit-background-clip:text; text-transform: uppercase; font-size: 100px; line-height: .75; margin:10px 0;">it's all<br/>about<br/>gaming</h1>
+</div>
+
   <div class="content">
     <h2 style="text-align: center;">Encuentra todas las consolas de la nueva generación</h2>
     <div style="text-align:center">
