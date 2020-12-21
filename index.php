@@ -54,6 +54,7 @@ session_start();
 
 <body>
 
+
 <header>
   <div id="navbar">
     <header>
@@ -101,8 +102,13 @@ session_start();
       <a href="acercade.php" id="muestra">Acerca de</a>
       <a href="contact.php" id="muestra">Contáctanos</a>
       <a href="faq.php" id="muestra">Ayuda</a>
+
     </div>
   </header>
+
+<div style="text-align: center; color: #FFF; display: flex; flex-direction: column; align-items: center; justify-content: center;  letter-spacing: 1px;">
+ <h1 style="background-image:url(https://media.giphy.com/media/3ornjHyjf1FiUneGGI/giphy.gif); background-size: cover; color: transparent; -moz-background-clip: text; -webkit-background-clip:text; text-transform: uppercase; font-size: 100px; line-height: .75; margin:10px 0;">it's all<br/>about<br/>gaming</h1>
+</div>
 
   <div class="content">
     <h2 style="text-align: center;">Encuentra todas las consolas de la nueva generación</h2>
@@ -134,16 +140,16 @@ session_start();
       <button id="butt">Utiliza el codigo JPG12D43 para 10% de descuento sobre los productos de la ultima
         generacion</button>
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <button id="butt">Ir a tienda</button>
+      <button id="butt" onclick="location.href='tienda.php';">Ir a tienda</button>
       <br><br>
     </div>
     <br>
     <div id="suscripcion">
       <br><br>
       <h2>Unete a nuestra lista de correo y seras primero en conocer lo nuevo</h2>
-      <form action="" id="unate">
+      <form action="promocion/enviar-correo.php" id="unate" method="post">
         <label for="cor" id="lab">Correo:</label><br><br>
-        <input type="email" id="cor" name="cor" placeholder="Direccion de correo" required=""
+        <input type="email" id="cor" name="email" placeholder="Direccion de correo" required=""
           oninvalid="this.setCustomValidity('Por favor ingrese correo valido')" oninput="setCustomValidity('')"><br><br>
         <input id="bot" type="submit" value="Suscribete ahora">
         <br><br><br><br>
