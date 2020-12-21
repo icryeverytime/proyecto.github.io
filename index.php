@@ -54,7 +54,6 @@ session_start();
 
 <body>
 
-<<<<<<< Updated upstream
 <header>
   <div id="navbar">
     <header>
@@ -89,7 +88,6 @@ session_start();
       <a href="acercade.php" id="muestra">Acerca de</a>
       <a href="contact.php" id="muestra">Contáctanos</a>
       <a href="faq.php" id="muestra">Ayuda</a>
-=======
   <header>
     <div id="navbar">
       <header>
@@ -132,7 +130,6 @@ session_start();
         <a href="contact.php" id="muestra">Contáctanos</a>
         <a href="about.asp" id="muestra">Ayuda</a>
       </div>
->>>>>>> Stashed changes
     </div>
   </header>
 
