@@ -20,10 +20,10 @@ $primernombre=$_POST['Pnombre'];
 $segundonombre=$_POST['Snombre'];
 $primerapellido=$_POST['Papellido'];
 $segundoapellido=$_POST['Sapellido'];
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "sistema_ecommerce4";
+$servername = "mysql.practicaprogramacionweb.xyz";
+$username = "midnightpro";
+$password = "Proyecto69";
+$dbname = "sistema_ecommerce";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);

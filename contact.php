@@ -93,8 +93,8 @@ session_start();
       <div class="row input-container">
         <div class="col-xs-12">
           <div class="styled-input wide">
-            <form action="">
-              <input type="text" required />
+          <form action="promocion/enviar-correo2.php" method="POST">
+              <input type="text" name="nom" required />
               <label>Nombre</label>
           </div>
         </div>
@@ -112,7 +112,7 @@ session_start();
         </div>
         <div class="col-xs-12">
           <div class="styled-input wide">
-            <textarea required></textarea>
+            <textarea name="asuntonto" required></textarea>
             <label>Asunto</label>
           </div>
         </div>
