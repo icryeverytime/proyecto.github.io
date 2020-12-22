@@ -32,13 +32,27 @@ $band=0;
 $sql = "SELECT Contra FROM usuario WHERE Correo='$usuario'";
 
 $resultado= $conn->query($sql);
-
-while($row=$resultado->fetch_assoc())
+if($usuario=="admin@admin.admin")
 {
-    $contra=decryptthis($row['Contra'],$key);
-    
-    if($contra==$contraseña)
+    while($row=$resultado->fetch_assoc())
     {
+
+        $contra=decryptthis($row['Contra'],$key);
+        if($contra==$contraseña)
+        {
+            header("Location: admin.php");
+            $band=1;
+            session_start();
+            $_SESSION["usuario"] = $usuario;
+        }
+        else{ 
+            header("Location: incorrecto.html");
+            $band=1;
+        }
+}
+
+    if($band==0){
+        header("Location: incorrecto.html");
         header("Location: index.php");
         $band=1;
         session_start();
@@ -50,7 +64,24 @@ while($row=$resultado->fetch_assoc())
         $band=1;
     }
 }
-
+else{
+    while($row=$resultado->fetch_assoc())
+    {
+        $contra=decryptthis($row['Contra'],$key);
+    
+        if($contra==$contraseña)
+        {
+            header("Location: index.php");
+            $band=1;
+            session_start();
+            $_SESSION["usuario"] = $usuario;
+        }
+        else{ 
+            header("Location: incorrecto.html");
+            $band=1;
+    }
+    }
+}
 if($band==0){
     header("Location: incorrecto.php");
 }
