@@ -31,8 +31,8 @@ if ($conn->connect_error) {
   die("Conexion fallo: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO usuario (Correo, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Contra)
-VALUES ('$correo', '$primernombre', '$segundonombre','$primerapellido','$segundoapellido', '$enc')";
+$sql = "INSERT INTO usuario (Correo, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Contra, intentos)
+VALUES ('$correo', '$primernombre', '$segundonombre','$primerapellido','$segundoapellido', '$enc', 1)";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";

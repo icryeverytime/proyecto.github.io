@@ -26,12 +26,13 @@ $usuario =$_POST['usuario'];
 $contraseña =$_POST['contraseña']; 
 
 
-
+$intentos;
 $band=0;
 
-$sql = "SELECT Contra FROM usuario WHERE Correo='$usuario'";
+$sql = "SELECT Contra,intentos FROM usuario WHERE Correo='$usuario'";
 
 $resultado= $conn->query($sql);
+
 if($usuario=="admin@admin.admin")
 {
     while($row=$resultado->fetch_assoc())
@@ -65,11 +66,12 @@ if($usuario=="admin@admin.admin")
     }
 }
 else{
-    while($row=$resultado->fetch_assoc())
+    while($row=$resultado->fetch_assoc())//si es
     {
         $contra=decryptthis($row['Contra'],$key);
-    
-        if($contra==$contraseña)
+        $tries=$row['intentos'];
+
+        if($contra==$contraseña && $tries<=3)
         {
             header("Location: index.php");
             $band=1;
@@ -77,12 +79,23 @@ else{
             $_SESSION["usuario"] = $usuario;
         }
         else{ 
-            header("Location: incorrecto.html");
+            
             $band=1;
+            //aumentar intentos
+            $intentos=$row['intentos'];
+            $intentos=$intentos+1;
+            $sql1 = "UPDATE usuario SET intentos=$intentos WHERE Correo='$usuario'";// actualizar
+            $conn->query($sql1);
+            header("Location: incorrecto.php");//solo es igual el nombre
     }
     }
 }
-if($band==0){
+
+if($tries>3){//nada coincide y se acabaron los intentos
+    header("Location: incorrecto2.php");
+}
+
+if($band==0){//nada coincide
     header("Location: incorrecto.php");
 }
 
