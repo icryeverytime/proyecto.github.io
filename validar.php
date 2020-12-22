@@ -8,10 +8,10 @@ function decryptthis($data, $key) {
     }
 
 
-$servername = "mysql.practicaprogramacionweb.xyz";
-$username = "midnightpro";
-$password = "Proyecto69";
-$dbname = "sistema_ecommerce";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "sistema_ecommerce4";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
