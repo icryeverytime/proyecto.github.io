@@ -11,7 +11,7 @@ function decryptthis($data, $key) {
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "proyecto_final";
+$dbname = "sistema_ecommerce4";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);

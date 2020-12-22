@@ -20,19 +20,15 @@ VALUES ('Play station 5','Nueva Generación','Es hora de jugar con la nueva cons
 ('Nintendo NES','Antigua Generación','No hay consola como esta.','4999.99',1,'Nnes.jpg');
 
 
-CREATE TABLE USUARIO(
-	codusu int not null AUTO_INCREMENT,
-	nomusu varchar(50) ,
-	apeusu varchar(50) ,
-	emausu varchar(50) not null,
-	pasusu varchar(20) not null,
-	estado int not null,
-	CONSTRAINT pk_usuario
-	PRIMARY KEY (codusu)
+CREATE TABLE usuario(
+	Correo varchar(255) PRIMARY KEY,
+	PrimerNombre varchar(50),
+	SegundoNombre varchar(50),
+	PrimerApellido varchar(50),
+	SegundoApellido varchar(50),
+	Contra varchar(500) 
 );
 
-INSERT INTO USUARIO (nomusu,apeusu,emausu,pasusu,estado)
-VALUES ('Usuario','Demo','correo@example.com','123456',1);
 
 create table PEDIDO(
 	codped int not null AUTO_INCREMENT,

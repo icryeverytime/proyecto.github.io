@@ -23,7 +23,7 @@ $segundoapellido=$_POST['Sapellido'];
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "proyecto_final";
+$dbname = "sistema_ecommerce4";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -41,6 +41,6 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-header("Location: index.html");
+header("Location: index.php");
 die();  
 ?>
