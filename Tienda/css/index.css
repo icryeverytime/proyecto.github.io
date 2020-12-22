@@ -82,6 +82,15 @@ input:placeholder{
 	font-family: 'Sen', sans-serif;
 	display: flex;
 }
+.item-actCarr{
+	padding: 5px 10px;
+	line-height: 30px;
+	font-size: 30px;
+	cursor: pointer;
+	color:#fff;
+	font-family: 'Sen', sans-serif;
+	display: flex;
+}
 .item-option p{
 	font-size: 15px;
 	margin: 0;

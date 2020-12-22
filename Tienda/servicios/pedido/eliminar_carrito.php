@@ -1,5 +1,7 @@
 <?php
 session_start();
+$_SESSION['numCarr'] -=1;
+
 $response=new stdClass();
 
 if (!isset($_SESSION['codusu'])) {

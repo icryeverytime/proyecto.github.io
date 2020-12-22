@@ -15,6 +15,7 @@ while($row=mysqli_fetch_array($result)){
 	$obj->despro=$row['despro'];
 	$obj->prepro=$row['prepro'];
 	$obj->rutimapro=$row['rutimapro'];
+	$obj->cantpro=$row['cantpro'];
 	$datos[$i]=$obj;
 	$i++;
 }

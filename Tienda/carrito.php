@@ -42,6 +42,9 @@
 			<h3>Mi carrito</h3>
 			<div class="body-pedidos" id="space-list">
 			</div>
+			<h5>TOTAL:</h5>
+			<div class="total-pedidos" id="total">
+			</div>
 			<form action="servicios/pedido/eliminar_carrito.php" method="post">
 			  <p>Eliminar producto: <input type="number" name="delete_produc"></p>
 			  <p>
@@ -53,6 +56,7 @@
 			<br>
 			<input class="ipt-procom" type="text" id="telusu" placeholder="Celular">
 			<br>
+			
 			<button onclick="procesar_compra()" style="margin-top: 5px;">Procesar compra</button>
 		</div>
 	</div>
@@ -70,7 +74,7 @@
 						html+=
 						'<div class="item-pedido">'+
 							'<div class="pedido-img">'+
-								'<img class="zoom" src="assets/products/'+data.datos[i].rutimapro+'""width="216px" height="216px">'+
+								'<img src="assets/products/'+data.datos[i].rutimapro+'">'+
 							'</div>'+
 							'<div class="pedido-detalle">'+
 								'<h3>'+data.datos[i].nompro+'</h3>'+
@@ -85,6 +89,7 @@
 						sumaMonto+=parseInt(data.datos[i].prepro)+1;
 					}
 					document.getElementById("space-list").innerHTML=html;
+					document.getElementById("total").innerHTML=sumaMonto;
 				},
 				error:function(err){
 					console.error(err);
@@ -120,6 +125,5 @@
 			}
 		}
 	</script>
-	<?php include("layouts/footer.php"); ?>
 </body>
 </html>

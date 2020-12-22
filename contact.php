@@ -74,8 +74,7 @@ session_start();
         <a href=# id="muestra" onclick="dos()">X</a>
 
         <a href="index.php" class="active" id="muestra" style="background-color:  #0466C8;">Inicio</a>
-        <a href="tienda.php" id="muestra">Tienda</a>
-
+        <a href="Tienda/index.php" id="muestra">Tienda</a>
         <a href="acercade.php" id="muestra">Acerca de</a>
         <a href="contact.php" class="active" id="muestra">Contáctanos</a>
         <a href="faq.php" id="muestra">Ayuda</a>

@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	$_SESSION['num']=rand(1,2);
+	$_SESSION['cant_carr'] = 0;
 ?>
 <!DOCTYPE html>
 <html>

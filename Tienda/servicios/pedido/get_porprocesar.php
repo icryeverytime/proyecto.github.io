@@ -1,4 +1,7 @@
 <?php
+session_start();
+$_SESSION['numCarr'] +=1;
+
 include('../_conexion.php');
 $response=new stdClass();
 

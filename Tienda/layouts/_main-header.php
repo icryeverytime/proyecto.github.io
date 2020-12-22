@@ -160,7 +160,7 @@
 
 </head>
 <header>
-	<div class="logo-place"><a href="index.php"><img src="assets/logo.png"></a></div>
+	<div class="logo-place"><a href="../index.php"><img src="assets/logo.png"></a></div>
 	<div class="search-place">
 		<input type="text" id="idbusqueda" placeholder="Encuenta lo que necesitas..."
 			value="<?php if(isset($_GET['text'])){echo $_GET['text'];}else{echo '';} ?>">
@@ -174,15 +174,13 @@
 			'<div class="item-option"><i class="fa fa-user-circle-o" aria-hidden="true"></i><p>'.$_SESSION['nomusu'].'</p></div>';
 		}else{
 		?>
-
-
 		<div class="nompadre">
 			<div class="nomhijo">
 				<?php 
-if(!empty($_SESSION["usuario"])) {
-echo $_SESSION["usuario"] ; 
-}
-?>
+					if(!empty($_SESSION["usuario"])) {
+					echo $_SESSION["usuario"] ; 
+					}
+					?>
 			</div>
 		</div>
 
@@ -202,25 +200,16 @@ echo $_SESSION["usuario"] ;
 		<?php endif; ?>
 
 
-
-
-
 		<?php
 		}
 		?>
 		<div class="item-option" title="Mis compras">
-			<a href="carrito.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+			<a href="carrito.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+			</a>
 		</div>
+		<p color="white" ><?php echo "<p class='item-actCarr'>". $_SESSION['cant_carr'] ."</p>";?></p>
 	</div>
 </header>
-
-
-
-
-
-
-
-
 
 <logi>
 

@@ -23,6 +23,7 @@
 					<h2 id="idcategoria"> nueva generación</h2>
 					<h1 id="idprice">S/. 35.<span>99</span></h1>
 					<h3 id="iddescription">Descripcion del producto</h3>
+					<h4 id="idcantidad">Todavia hay </h4>
 					<button onclick="iniciar_compra()">Comprar</button>
 				</div>
 			</section>
@@ -43,6 +44,8 @@
 				data:{},
 				success:function(data){
 					console.log(data);
+					let disp='En existencia';
+					let nodisp='No disponible';
 					let html='';
 					for (var i = 0; i < data.datos.length; i++) {
 						if (data.datos[i].codpro==p) {
@@ -51,6 +54,11 @@
 							document.getElementById("idcategoria").innerHTML=data.datos[i].catpro;
 							document.getElementById("idprice").innerHTML=formato_precio(data.datos[i].prepro);
 							document.getElementById("iddescription").innerHTML=data.datos[i].despro;
+							if(data.datos[i].cantpro > 0){
+								document.getElementById("idcantidad").innerHTML=disp;
+							}else{
+								document.getElementById("idcantidad").innerHTML=nodisp;
+							}
 						}
 						html+=
 						'<div class="product-box">'+
@@ -88,8 +96,9 @@
 				success:function(data){
 					console.log(data);
 					if (data.state) {
-						desc_compra();
 						alert(data.detail);
+						//decreCant();
+						//desc_compra();
 					}else{
 						alert(data.detail);
 						if (data.open_login) {
@@ -105,9 +114,9 @@
 		function open_login(){
 			window.location.href="login.php";
 		}
-		function desc_compra(){
+		function decreCant(){
 			$.ajax({
-				url:'descuento.php',
+				url:'servicios/compra/decrementar.php',
 				type:'POST',
 				data:{
 					codpro:p
@@ -116,11 +125,24 @@
 					console.log(data);
 					if (data.state) {
 						alert(data.detail);
-					}else{
+					}
+				},
+				error:function(err){
+					console.error(err);
+				}
+			});
+		}
+		function desc_compra(){
+			$.ajax({
+				url:'servicios/compra/descuento.php',
+				type:'POST',
+				data:{
+					codpro:p
+				},
+				success:function(data){
+					console.log(data);
+					if (data.state) {
 						alert(data.detail);
-						if (data.open_login) {
-							open_login();
-						}
 					}
 				},
 				error:function(err){
