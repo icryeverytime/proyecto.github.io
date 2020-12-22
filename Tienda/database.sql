@@ -26,7 +26,8 @@ CREATE TABLE usuario(
 	SegundoNombre varchar(50),
 	PrimerApellido varchar(50),
 	SegundoApellido varchar(50),
-	Contra varchar(500) 
+	Contra varchar(500),
+	intentos int
 );
 
 
