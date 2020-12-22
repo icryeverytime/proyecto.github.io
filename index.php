@@ -262,21 +262,6 @@ session_start();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <logi>
 
 <div id="id01" class="modal">
