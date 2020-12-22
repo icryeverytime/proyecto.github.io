@@ -521,6 +521,19 @@ span.psw {
 
 /* -FIN LOGIN- */
 
+.nompadre {
+  display: flex;
+  align-items: center;
+}
+
+.nomhijo{
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  
+}
+
+
 .reg{
   padding: 20px;
   margin-left: auto;
