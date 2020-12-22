@@ -88,7 +88,7 @@
 				success:function(data){
 					console.log(data);
 					if (data.state) {
-						desc_compra();
+						//desc_compra();
 						alert(data.detail);
 					}else{
 						alert(data.detail);
@@ -103,7 +103,7 @@
 			});
 		}
 		function open_login(){
-			window.location.href="login.php";
+			//window.location.href="login.php";
 		}
 		function desc_compra(){
 			$.ajax({

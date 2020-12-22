@@ -12,7 +12,7 @@ session_start();
   <title>Pagina Principal</title>
   <link rel="shortcut icon" href="img/favicon.ico" />
   <link rel="stylesheet" href="estilos/estilos.css" />
-  <link rel="stylesheet" href="estilos/captcha.css" />
+  
 
   <script src="https://kit.fontawesome.com/cebbaaaaab.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/funciones.js"></script>
@@ -54,16 +54,16 @@ session_start();
 
 <body>
 
-      <header>
+  <header>
     <div id="navbar">
-        <a href="index.php">
-          <img src="img/Logo2.png" class="img-centrar" id="head">
-        </a>
-        <br>
+      <a href="index.php">
+        <img src="img/Logo2.png" class="img-centrar" id="head">
+      </a>
+      <br>
       <nav>
         <ul>
           <li><a class="active" id="hide" href="index.php"><br>Inicio</a></li>
-          <li><a href="aas.php" id="hide"><br>Tienda</a></li>
+          <li><a href="tienda/index.php" id="hide"><br>Tienda</a></li>
           <li><a href="acercade.php" id="hide"><br>Acerca de</a></li>
           <li><a href="contact.php" id="hide"><br>Contáctanos</a></li>
           <li><a href="faq.php" id="hide"><br>Ayuda</a></li>
@@ -105,10 +105,10 @@ session_start();
         <a href="contact.php" id="muestra">Contáctanos</a>
         <a href="faq.php" id="muestra">Ayuda</a>
 
-        </div>
       </div>
+    </div>
   </header>
-    
+
   <div
     style="text-align: center; color: #FFF; display: flex; flex-direction: column; align-items: center; justify-content: center;  letter-spacing: 1px;">
     <h1
@@ -163,7 +163,7 @@ session_start();
     </div>
     <br><br><br>
   </div>
-  
+
   <footer>
     <div class="pie">
       <div>
@@ -261,7 +261,7 @@ session_start();
 
 
   <logi>
-    
+
     <div id="id01" class="modal">
 
       <form class="modal-content animate" action="validar.php" method="post">
@@ -273,32 +273,35 @@ session_start();
 
         <div class="container">
           <label for="usuario"><b>Usuario</b></label>
-          <input type="text" placeholder="Nombre de usuario" name="usuario" required>
+          <input type="text"  value="<?php if(isset($_COOKIE["usuario"])){echo $_COOKIE["usuario"];}?>" name="usuario" required>
 
           <label for="psw"><b>Contraseña</b></label>
-          <input type="password" placeholder="Ingrese contraseña" name="contraseña" required>
+          <input type="password" value="<?php if(isset($_COOKIE["contraseña"])){echo $_COOKIE["contraseña"];}?>" name="contraseña" required>
 
-        <table>
-        
-          <tr>
-            <td>
-              <input type="text" name="captcha" id="captcha" value=<?php echo codigo_captcha(); ?> class="captcha"
-                size="4" readonly>
-            </td>
-            <td>
-              <input type="text" name="txtcopia" id="txtcopia" size="10" placeholder="Ingrese el captcha" required>
-            </td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-          </tr>
-          
+          <table>
+
+            <tr>
+              <td>
+                <input type="text" name="captcha" id="captcha" value=<?php echo codigo_captcha(); ?> class="captcha rotar1"
+                  size="4" readonly>
+              </td>
+              <td>
+                <input type="text" name="txtcopia" id="txtcopia" size="10" placeholder="Ingrese el captcha" required>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+
           </table>
+
           <button type="submit" onclick="validar();">Login</button>
           <label>
             <input type="checkbox" checked="checked" name="remember"> Recordarme
           </label>
         </div>
+
+        
 
         <div class="container" style="background-color:#f1f1f1">
           <button type="button" onclick="document.getElementById('id01').style.display='none'"
@@ -307,7 +310,7 @@ session_start();
           Olvidaste tu contraseña? <a href="enviacontra.php">Recuperar contraseña</a>
         </div>
       </form>
-      </div>
+    </div>
     <script>
       // Get the modal
       var modal = document.getElementById('id01');
@@ -320,7 +323,7 @@ session_start();
       }
     </script>
 
-<?php
+    <?php
     function codigo_captcha(){
       $k="";
       $paramentros="ABCDEFGHIJKLMNOPQRSTUVXYZ015";
@@ -344,9 +347,9 @@ session_start();
           //window.location.href = 'incorrecto.php';
           window.open("logoutNI.php");
           window.close();
-        } 
-          
-        
+        }
+
+
       }
     </script>
 

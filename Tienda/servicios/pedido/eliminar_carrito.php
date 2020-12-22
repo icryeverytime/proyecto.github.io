@@ -2,7 +2,7 @@
 session_start();
 $response=new stdClass();
 
-if (!isset($_SESSION['codusu'])) {
+if (!isset($_SESSION['usuario'])) {
 	$response->state=false;
 	$response->detail="No esta logeado";
 	$response->open_login=true;

@@ -3,7 +3,7 @@
 	$response=new stdClass();
 	include_once('../_conexion.php');
 
-	$codusu=$_SESSION['codusu'];
+	$codusu=$_SESSION['usuario'];
 	$dirusu=$_POST['dirusu'];
 	$telusu=$_POST['telusu'];
 	

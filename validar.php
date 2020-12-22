@@ -1,4 +1,13 @@
 <?php
+            if(!empty($_POST["remember"]))
+            {
+                setcookie("usuario",$_POST["usuario"]);
+            setcookie("contraseña",$_POST["contraseña"]);
+            }else{
+                setcookie("username","");
+                setcookie("password","");
+            }
+            
 $key='1234qwerasdfoj2340wqer#2143!23q';
 $data="";
 function decryptthis($data, $key) {
@@ -7,12 +16,10 @@ function decryptthis($data, $key) {
     return openssl_decrypt($encrypted_data, 'aes-256-cbc', $encryption_key, 0, $iv);
     }
 
-
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "sistema_ecommerce4";
-
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
@@ -20,11 +27,8 @@ if ($conn->connect_error) {
 
 }
 
-
-
 $usuario =$_POST['usuario'];
 $contraseña =$_POST['contraseña']; 
-
 
 $intentos;
 $band=0;
