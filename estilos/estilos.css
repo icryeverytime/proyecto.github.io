@@ -387,11 +387,20 @@ header{
   color: white;
   border: none;
   height: 50.8px;
-  width: 80px;
+  width: 90px;
   float: right;
+  margin-top: 0px;
 }
 
-
+#log2{
+  background-color: #7a1b1b;
+  color: white;
+  border: none;
+  height: 50.8px;
+  width: 80px;
+  float: right;
+  margin-top: 0px;
+}
 
 
 
