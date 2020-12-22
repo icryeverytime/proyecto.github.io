@@ -304,7 +304,7 @@ session_start();
           <button type="button" onclick="document.getElementById('id01').style.display='none'"
             class="cancelbtn">Cancelar</button>
           <span class="psw">No tienes cuenta? <a href="registro.html">Suscribete</a></span>
-          Olvidaste tu contraseña? <a href="registro.html">Recuperar contraseña</a>
+          Olvidaste tu contraseña? <a href="enviacontra.php">Recuperar contraseña</a>
         </div>
       </form>
       </div>
