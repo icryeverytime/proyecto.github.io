@@ -2,19 +2,19 @@
 session_start();
 $response=new stdClass();
 
-if (!isset($_SESSION['codusu'])) {
+if (!isset($_SESSION['usuario'])) {
 	$response->state=false;
 	$response->detail="No esta logeado";
 	$response->open_login=true;
 }else{
 
 	include_once('../_conexion.php');
-	$codusu=$_SESSION['codusu'];
+	$codusu=$_SESSION['usuario'];
 	$codpro=$_POST['codpro'];
 	$sql="INSERT INTO pedido
-	(codusu,codpro,fecped,estado,dirusuped,telusuped)
+	(codpro,fecped,estado,dirusuped,telusuped)
 	VALUES
-	($codusu,$codpro,now(),1,'','')";
+	($codpro,now(),1,'','')";
 	$result=mysqli_query($con,$sql);
 	if ($result) {
 		$response->state=true;

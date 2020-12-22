@@ -542,6 +542,50 @@ logi .animate {
   
 }
 
+.captcha{
+	border-radius: 20px;
+	font-size: 20px;
+	text-transform: uppercase;
+	height: 20px;
+	width: auto;
+	
+	text-align: center;
+	pointer-events:none;
+}	
+
+
+#captcha
+{
+    border: 0px solid #444444;
+    height:39px;
+    width:346px;
+    background:url(img/captchabg3.jpg) no-repeat; 
+     
+    }
+
+
+
+.rotar1 
+    { 
+      -webkit-transform: rotate(-45deg); 
+      -moz-transform: rotate(-45deg); 
+      -ms-transform: rotate(-45deg); 
+      -o-transform: rotate(-45deg); 
+      transform: rotate(-45deg); 
+      
+      -webkit-transform-origin: 50% 50%; 
+      -moz-transform-origin: 50% 50%; 
+      -ms-transform-origin: 50% 50%; 
+      -o-transform-origin: 50% 50%; 
+      transform-origin: 50% 50%; 
+      
+      font-size: 20px; 
+      width: 250px; 
+      position: relative; 
+    }
+	
+
+
 
 .reg{
   padding: 20px;
