@@ -72,7 +72,7 @@ session_start();
           <details>
             <summary title="Agregar productos">Agregar productos</summary>
             <p class="faq-content">
-                <form>
+                <form action="Tienda/assets/products/alta.php" method="POST" enctype="multipart/form-data">
                     <label for="nombre">Nombre de producto:</label>
                     <br>
                     <input type="text" id="nombre" name="nombre">
@@ -84,13 +84,31 @@ session_start();
                     <br><br>
                     <label for="precio">Precio del producto:</label>
                     <br>
-                    <input type="number" id="precio" name="precio" min="1">
+                    <input type="text" id="precio" name="precio" min="1">
                     <br>
                     <br>
+                    <label for="cantidad">Cantidad:</label>
+                    <br>
+                    <input type="number" id="cantidad" name="cantidad">
+                    <br>
+                    <br>
+                    <input type="radio" id="NuevaGeneracion" name="generacion" value="Nueva Generacion">
+                    <label for="NuevaGeneracion">Nueva Generacion</label>
+                    <br>
+                    <input type="radio" id="ViejaGeneracion" name="generacion" value="Antigua Generación">
+                    <label for="NuevaGeneracion">Vieja Generacion</label>
+                    <br><br>
                     <label for="Estado">Estado del producto</label>
                     <br>
                     <input type="number" id="Estado" name="Estado" min="1" max="2">
                     <br><br>
+                    <label for="nombreI">Nombre de imagen</label>
+                    <Br>
+                    <input type="text" id="nombreI" name="nombreI">
+                    <label for="myFile">Imagen del producto</label>
+                    <br>
+                    <input type="file" id="myFile" name="filename">
+                    <br>  
                     <input type="submit" value="Agregar producto">
                 </form>
             </p>

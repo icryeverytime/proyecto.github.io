@@ -88,6 +88,7 @@
 				success:function(data){
 					console.log(data);
 					if (data.state) {
+						desc_compra();
 						alert(data.detail);
 					}else{
 						alert(data.detail);
@@ -103,6 +104,29 @@
 		}
 		function open_login(){
 			window.location.href="login.php";
+		}
+		function desc_compra(){
+			$.ajax({
+				url:'descuento.php',
+				type:'POST',
+				data:{
+					codpro:p
+				},
+				success:function(data){
+					console.log(data);
+					if (data.state) {
+						alert(data.detail);
+					}else{
+						alert(data.detail);
+						if (data.open_login) {
+							open_login();
+						}
+					}
+				},
+				error:function(err){
+					console.error(err);
+				}
+			});
 		}
 	</script>
 	<?php include("layouts/footer.php"); ?>
