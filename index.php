@@ -54,15 +54,12 @@ session_start();
 
 <body>
 
-
-  <header>
-    <div id="navbar">
       <header>
+    <div id="navbar">
         <a href="index.php">
           <img src="img/Logo2.png" class="img-centrar" id="head">
         </a>
         <br>
-      </header>
       <nav>
         <ul>
           <li><a class="active" id="hide" href="index.php"><br>Inicio</a></li>
@@ -76,7 +73,7 @@ session_start();
             <?php if(empty($_SESSION["usuario"])): ?>
             <button id="log" onclick="document.getElementById('id01').style.display='block'">Login</button>
             <?php else: ?>
-          <li style="float: right;"> <button id="log2" onclick="location.href='logout.php'; ">Logout</li>
+          <li style="float: right;"> <button id="log2" onclick="location.href='logout.php';">Logout</li>
           <?php endif; ?>
 
           </li>
@@ -108,9 +105,10 @@ session_start();
         <a href="contact.php" id="muestra">Contáctanos</a>
         <a href="faq.php" id="muestra">Ayuda</a>
 
+        </div>
       </div>
   </header>
-
+    
   <div
     style="text-align: center; color: #FFF; display: flex; flex-direction: column; align-items: center; justify-content: center;  letter-spacing: 1px;">
     <h1
@@ -165,6 +163,7 @@ session_start();
     </div>
     <br><br><br>
   </div>
+  
   <footer>
     <div class="pie">
       <div>
@@ -279,31 +278,13 @@ session_start();
           <label for="psw"><b>Contraseña</b></label>
           <input type="password" placeholder="Ingrese contraseña" name="contraseña" required>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-
-
-          
+        <table>
+        
           <tr>
-          <captchablur>
             <td>
-              <input type="text" name="captcha" id="captcha" value=<?php echo codigo_captcha(); ?> class="captcha rotar1"
-                size="1" readonly>
+              <input type="text" name="captcha" id="captcha" value=<?php echo codigo_captcha(); ?> class="captcha"
+                size="4" readonly>
             </td>
-            </captchablur>
             <td>
               <input type="text" name="txtcopia" id="txtcopia" size="10" placeholder="Ingrese el captcha" required>
             </td>
@@ -311,24 +292,8 @@ session_start();
           <tr>
             <td>&nbsp;</td>
           </tr>
-  
+          
           </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           <button type="submit" onclick="validar();">Login</button>
           <label>
             <input type="checkbox" checked="checked" name="remember"> Recordarme
@@ -340,9 +305,9 @@ session_start();
             class="cancelbtn">Cancelar</button>
           <span class="psw">No tienes cuenta? <a href="registro.html">Suscribete</a></span>
           Olvidaste tu contraseña? <a href="registro.html">Recuperar contraseña</a>
+        </div>
       </form>
-    </div>
-
+      </div>
     <script>
       // Get the modal
       var modal = document.getElementById('id01');
