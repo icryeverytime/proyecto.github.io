@@ -46,13 +46,13 @@ while($row=$resultado->fetch_assoc())
         
     }
     else{ 
-        header("Location: incorrecto.php");
+        header("Location: ../incorrecto.php");
         $band=1;
     }
 }
 
 if($band==0){
-    header("Location: incorrecto.php");
+    header("Location: ../incorrecto.php");
 }
 
 
