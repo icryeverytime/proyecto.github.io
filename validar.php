@@ -36,6 +36,7 @@ if($usuario=="admin@admin.admin")
 {
     while($row=$resultado->fetch_assoc())
     {
+
         $contra=decryptthis($row['Contra'],$key);
         if($contra==$contraseña)
         {
@@ -52,6 +53,15 @@ if($usuario=="admin@admin.admin")
 
     if($band==0){
         header("Location: incorrecto.html");
+        header("Location: index.php");
+        $band=1;
+        session_start();
+        $_SESSION["usuario"] = $usuario;
+        
+    }
+    else{ 
+        header("Location: incorrecto.php");
+        $band=1;
     }
 }
 else{
@@ -73,7 +83,7 @@ else{
     }
 }
 if($band==0){
-    header("Location: incorrecto.html");
+    header("Location: incorrecto.php");
 }
 
 
