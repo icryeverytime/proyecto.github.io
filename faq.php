@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -27,16 +31,33 @@
         <li><a href="acercade.php" id="hide"><br>Acerca de</a></li>
         <li><a href="contact.php" id="hide"><br>Contáctanos</a></li>
         <li><a href="faq.php" class="active" id="hide"><br>Ayuda</a></li>
-        <button href="index.php" id="log" role="button" class=""
-          onclick="document.getElementById('id01').style.display='block'">Login</button>
-      </li>
+
+        <?php if(empty($_SESSION["usuario"])): ?>
+        <button id="log" onclick="document.getElementById('id01').style.display='block'">Login</button>
+        <?php else: ?>
+        <li style="float: right;"> <button id="log2" onclick="location.href='logout.php'; ">Logout</li>
+        <?php endif; ?>
+
+        </li>
+        <li style="float: right;">
+
+          <div class="nompadre">
+            <div class="nomhijo">
+              <?php 
+        if(!empty($_SESSION["usuario"])) {
+          echo $_SESSION["usuario"] ; 
+        }
+          ?>
+            </div>
+          </div>
+        </li>
 
         <li onclick="tres()">
           <img src="img/menu.png" width="40px" height="40px" id="show">
         </li>
         <li style="float: right;"><a href="login.html" style="height: 50.8px;"><img src="img/cart.png" width="31px"
               height="40px"></a></li>
-              
+
       </ul>
     </nav>
     <div id="mostrar">
@@ -47,7 +68,7 @@
       <a href="contact.php" id="muestra">Contáctanos</a>
       <a href="faq.php" class="active" id="muestra">Ayuda</a>
       <li style="float: right;">
-        
+
     </div>
   </div>
 
@@ -206,48 +227,50 @@
 
 
 
-<logi>
+  <logi>
 
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="validar.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img/logologin.png" alt="Avatar" class="avatar">
+    <div id="id01" class="modal">
+
+      <form class="modal-content animate" action="validar.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+          <img src="img/logologin.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Usuario</b></label>
+          <input type="text" placeholder="Nombre de usuario" name="usuario" required>
+
+          <label for="psw"><b>Contraseña</b></label>
+          <input type="password" placeholder="Ingrese contraseña" name="contraseña" required>
+
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Recordarme
+          </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn">Cancelar</button>
+          <span class="psw">No tienes cuenta? <a href="registro.html">Suscribete</a></span>
+        </div>
+      </form>
     </div>
 
-    <div class="container">
-      <label for="uname"><b>Usuario</b></label>
-      <input type="text" placeholder="Nombre de usuario" name="usuario" required>
+    <script>
+      // Get the modal
+      var modal = document.getElementById('id01');
 
-      <label for="psw"><b>Contraseña</b></label>
-      <input type="password" placeholder="Ingrese contraseña" name="contraseña" required>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Recordarme
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
-      <span class="psw">No tienes cuenta? <a href="registro.html">Suscribete</a></span>
-    </div>
-  </form>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-</logi>
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+  </logi>
 
 </body>
 
