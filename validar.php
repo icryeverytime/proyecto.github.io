@@ -27,14 +27,7 @@ $contraseña =$_POST['contraseña'];
 
 
 
-
-
-
-
-
-
 $band=0;
-
 
 $sql = "SELECT Contra FROM usuario WHERE Correo='$usuario'";
 
@@ -48,6 +41,9 @@ while($row=$resultado->fetch_assoc())
     {
         header("Location: index.php");
         $band=1;
+        session_start();
+        $_SESSION["usuario"] = $usuario;
+        
     }
     else{ 
         header("Location: incorrecto.html");
@@ -58,9 +54,6 @@ while($row=$resultado->fetch_assoc())
 if($band==0){
     header("Location: incorrecto.html");
 }
-//
-
-
 
 
 ?>

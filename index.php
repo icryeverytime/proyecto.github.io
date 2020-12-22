@@ -70,24 +70,33 @@ session_start();
         <li><a href="acercade.php" id="hide"><br>Acerca de</a></li>
         <li><a href="contact.php" id="hide"><br>Contáctanos</a></li>
         <li><a href="faq.php" id="hide"><br>Ayuda</a></li>
-
         <li style="float: right;">
         
-          
-        <button id="log" role="button" class=""
-            onclick="document.getElementById('id01').style.display='block'">Login</button>
-
-
-
-          
-        </li>
         
+    
 
 
+<?php if(empty($_SESSION["usuario"])): ?>
+  <button id="log" onclick="document.getElementById('id01').style.display='block'">Login</button>
+<?php else: ?>
+  <li style="float: right;"> <button id="log" onclick="location.href='logout.php'; ">Logout</li>
+<?php endif; ?>
 
+        
+        </li>
+        <li style="float: right;">
+        
+        <div class="nompadre">
+            <div class="nomhijo">
+        <?php 
+        if(!empty($_SESSION["usuario"])) {
+          echo $_SESSION["usuario"] ; 
+        }
+          ?>   
+          </div>
+        </div>
 
-
-
+          
         <li onclick="tres()">
           <img src="img/menu.png" width="40px" height="40px" id="show">
         </li>
