@@ -296,12 +296,14 @@ session_start();
           
 
 
-
+          
           <tr>
+          <captchablur>
             <td>
-              <input type="text" name="captcha" id="captcha" value=<?php echo codigo_captcha(); ?> class="captcha"
-                size="4" readonly>
+              <input type="text" name="captcha" id="captcha" value=<?php echo codigo_captcha(); ?> class="captcha rotar1"
+                size="1" readonly>
             </td>
+            </captchablur>
             <td>
               <input type="text" name="txtcopia" id="txtcopia" size="10" placeholder="Ingrese el captcha" required>
             </td>
@@ -309,7 +311,7 @@ session_start();
           <tr>
             <td>&nbsp;</td>
           </tr>
-          
+  
           </table>
 
 
