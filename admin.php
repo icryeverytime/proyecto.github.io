@@ -118,11 +118,36 @@ session_start();
           <details>
             <summary title="Actualizar productos">Actualizar productos</summary>
             <p class="faq-content">
-              <form>
+              <form action="actualizar.php" method="POST">
                 <label for="nombreActu">Nombre de producto a actualizar:</label>
-          
                 <input type="text" id="nombreActu" name="nombreActu">
                 <br><br>
+                <label for="descripcionActu">Descripcion del producto:</label>
+                    <br>
+                    <textarea id="descripcionActu" name="descripcionActu" rows="4" columns="50"></textarea>
+                    <br><br>
+                    <label for="precioActu">Precio del producto:</label>
+                    <br>
+                    <input type="text" id="precioActu" name="precioActu" min="1">
+                    <br>
+                    <br>
+                    <label for="cantidadActu">Cantidad:</label>
+                    <br>
+                    <input type="number" id="cantidadActu" name="cantidadActu">
+                    <br>
+                    <br>
+                    <input type="radio" id="NuevaGeneracion" name="generacionActu" value="Nueva Generacion">
+                    <label for="NuevaGeneracion">Nueva Generacion</label>
+                    <br>
+                    <input type="radio" id="ViejaGeneracion" name="generacionActu" value="Antigua Generación">
+                    <label for="NuevaGeneracion">Vieja Generacion</label>
+                    <br><br>
+                    <label for="EstadoActu">Estado del producto</label>
+                    <br>
+                    <input type="number" id="EstadoActu" name="EstadoActu" min="1" max="2">
+                    <br><br>
+                    <Br>
+                    <br>  
                 <input type="submit" value="Actualizar producto">
             </form>
             </p>
@@ -132,7 +157,7 @@ session_start();
           <details>
             <summary title="Borrar productos">Borrar productos</summary>
             <p class="faq-content">
-            <form>
+            <form action="eliminar.php" method="POST">
                 <label for="nombreEli">Nombre de producto a eliminar:</label>
           
                 <input type="text" id="nombreEli" name="nombreEli">
