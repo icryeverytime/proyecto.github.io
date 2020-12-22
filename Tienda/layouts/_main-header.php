@@ -38,7 +38,7 @@
 		/* Center the image and position the close button */
 		logi .imgcontainer {
 			text-align: center;
-			margin: 24px 0 12px 0;
+			margin: 1px 0 12px 0;/* 24 0 12 */
 			position: relative;
 		}
 
@@ -82,7 +82,7 @@
 		/* Modal Content/Box */
 		logi .modal-content {
 			background-color: #fefefe;
-			margin: 5% auto 15% auto;
+			margin: 1% auto 15% auto;
 			/* 5% from the top, 15% from the bottom and centered */
 			border: 1px solid #888;
 			width: 30%;
@@ -251,6 +251,8 @@ echo $_SESSION["usuario"] ;
 					class="cancelbtn">Cancelar</button>
 				<span class="psw">No tienes cuenta? <a href="../registro.html" style="color="
 						blue";">Suscribete</a></span>
+			<br>
+			Olvidaste tu contraseña? <a href="../registro.html"> Haz click aqui para recuperarla</a>
 			</div>
 		</form>
 	</div>

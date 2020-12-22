@@ -12,10 +12,10 @@ session_start();
   <title>Pagina Principal</title>
   <link rel="shortcut icon" href="img/favicon.ico" />
   <link rel="stylesheet" href="estilos/estilos.css" />
-
+  <link rel="stylesheet" href="estilos/captcha.css" />
 
   <script src="https://kit.fontawesome.com/cebbaaaaab.js" crossorigin="anonymous"></script>
-  <script src="js/funciones.js"></script>
+  <script type="text/javascript" src="js/funciones.js"></script>
 
 
   <script>
@@ -262,7 +262,7 @@ session_start();
 
 
   <logi>
-
+    
     <div id="id01" class="modal">
 
       <form class="modal-content animate" action="validar.php" method="post">
@@ -273,13 +273,61 @@ session_start();
         </div>
 
         <div class="container">
-          <label for="uname"><b>Usuario</b></label>
+          <label for="usuario"><b>Usuario</b></label>
           <input type="text" placeholder="Nombre de usuario" name="usuario" required>
 
           <label for="psw"><b>Contraseña</b></label>
           <input type="password" placeholder="Ingrese contraseña" name="contraseña" required>
 
-          <button type="submit">Login</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+          <tr>
+            <td>
+              <input type="text" name="captcha" id="captcha" value=<?php echo codigo_captcha(); ?> class="captcha"
+                size="4" readonly>
+            </td>
+            <td>
+              <input type="text" name="txtcopia" id="txtcopia" size="10" placeholder="Ingrese el captcha" required>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          
+          </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <button type="submit" onclick="validar();">Login</button>
           <label>
             <input type="checkbox" checked="checked" name="remember"> Recordarme
           </label>
@@ -289,7 +337,7 @@ session_start();
           <button type="button" onclick="document.getElementById('id01').style.display='none'"
             class="cancelbtn">Cancelar</button>
           <span class="psw">No tienes cuenta? <a href="registro.html">Suscribete</a></span>
-        </div>
+          >Olvidaste tu contraseña? <a href="registro.html">Recuperar contraseña</a>
       </form>
     </div>
 
@@ -304,6 +352,38 @@ session_start();
         }
       }
     </script>
+
+<?php
+    function codigo_captcha(){
+      $k="";
+      $paramentros="ABCDEFGHIJKLMNOPQRSTUVXYZ015";
+      $maximo=strlen($paramentros)-1;
+      for($i=0; $i<5; $i++){
+        $k.=$paramentros[mt_rand(0,$maximo)];
+      }
+      return $k;
+  }
+  ?>
+
+
+    <script type="text/javascript">
+      function validar() {
+
+        var copia = document.getElementById("txtcopia").value;
+        var captcha = document.getElementById("captcha").value;
+
+        if (copia != captcha) {
+          alert("Captcha incorrecto");
+          //window.location.href = 'incorrecto.php';
+          window.open("logoutNI.php");
+          window.close();
+        } 
+          
+        
+      }
+    </script>
+
+
   </logi>
 
 
