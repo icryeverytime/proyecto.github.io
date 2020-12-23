@@ -10,6 +10,7 @@
 
 	$sql="UPDATE pedido SET dirusuped='$dirusu',telusuped='$telusu',estado=2
 	where estado=1";
+	
 	$result=mysqli_query($con,$sql);
 	if ($result) {
 		$response->state=true;

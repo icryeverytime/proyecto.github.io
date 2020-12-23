@@ -2,6 +2,13 @@
 session_start();
 $response=new stdClass();
 
+$_SESSION['cant_carr'] -=1;
+
+$codpro=$_SESSION['volver'];
+
+$sql2="UPDATE producto SET cantpro= cantpro +1
+	where codpro=$codpro";
+
 if (!isset($_SESSION['usuario'])) {
 	$response->state=false;
 	$response->detail="No esta logeado";
