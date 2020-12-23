@@ -82,10 +82,10 @@
 		/* Modal Content/Box */
 		logi .modal-content {
 			background-color: #fefefe;
-			margin: 1% auto 15% auto;
+			margin: -4% auto 15% auto;
 			/* 5% from the top, 15% from the bottom and centered */
 			border: 1px solid #888;
-			width: 30%;
+			width: 26%;
 			/* Could be more or less, depending on screen size */
 		}
 
@@ -156,6 +156,51 @@
 			padding: 10px;
 
 		}
+
+
+
+
+.captcha{
+	border-radius: 20px;
+	font-size: 20px;
+	text-transform: uppercase;
+	height: 20px;
+	width: auto;
+	
+	text-align: center;
+	pointer-events:none;
+}	
+
+
+#captcha
+{
+    border: 0px solid #444444;
+    height:39px;
+    width:346px;
+    background:url(img/captchabg3.jpg) no-repeat; 
+     
+    }
+
+
+
+.rotar1 
+    { 
+      -webkit-transform: rotate(-45deg); 
+      -moz-transform: rotate(-45deg); 
+      -ms-transform: rotate(-45deg); 
+      -o-transform: rotate(-45deg); 
+      transform: rotate(-45deg); 
+      
+      -webkit-transform-origin: 50% 50%; 
+      -moz-transform-origin: 50% 50%; 
+      -ms-transform-origin: 50% 50%; 
+      -o-transform-origin: 50% 50%; 
+      transform-origin: 50% 50%; 
+      
+      font-size: 20px; 
+      width: 250px; 
+      position: relative; 
+    }
 	</style>
 
 </head>
@@ -224,48 +269,87 @@ echo $_SESSION["usuario"] ;
 
 <logi>
 
-	<div id="id01" class="modal">
+<div id="id01" class="modal">
 
-		<form class="modal-content animate" action="login2.php" method="post">
-			<div class="imgcontainer">
-				<span onclick="document.getElementById('id01').style.display='none'" class="close"
-					title="Close Modal">&times;</span>
-				<img src="../img/logologin.png" alt="Avatar" class="avatar">
-			</div>
-
-			<div class="container">
-				<label for="uname"><b>Usuario</b></label>
-				<input type="text" placeholder="Nombre de usuario" name="usuario" required>
-
-				<label for="psw"><b>Contraseña</b></label>
-				<input type="password" placeholder="Ingrese contraseña" name="contraseña" required>
-
-				<button type="submit">Login</button>
-				<label>
-					<input type="checkbox" checked="checked" name="remember"> Recordarme
-				</label>
-			</div>
-
-			<div class="container" style="background-color:#888">
-				<button type="button" onclick="document.getElementById('id01').style.display='none'"
-					class="cancelbtn">Cancelar</button>
-				<span class="psw">No tienes cuenta? <a href="../registro.html" style="color="
-						blue";">Suscribete</a></span>
-			<br>
-			Olvidaste tu contraseña? <a href="../registro.html"> Haz click aqui para recuperarla</a>
-			</div>
-		</form>
+  <form class="modal-content animate" action="login2.php" method="post">
+	<div class="imgcontainer">
+	  <span onclick="document.getElementById('id01').style.display='none'" class="close"
+		title="Close Modal">&times;</span>
+	  <img src="../img/logologin.png" alt="Avatar" class="avatar">
 	</div>
 
-	<script>
-		// Get the modal
-		var modal = document.getElementById('id01');
+	<div class="container">
+	  <label for="usuario"><b>Usuario</b></label>
+	  <input type="text"  value="<?php if(isset($_COOKIE["usuario"])){echo $_COOKIE["usuario"];}?>" name="usuario" required>
 
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function (event) {
-			if (event.target == modal) {
-				modal.style.display = "none";
-			}
-		}
-	</script>
+	  <label for="psw"><b>Contraseña</b></label>
+	  <input type="password" value="<?php if(isset($_COOKIE["contraseña"])){echo $_COOKIE["contraseña"];}?>" name="contraseña" required>
+
+	  
+			<input type="text" name="captcha" id="captcha" value=<?php echo codigo_captcha(); ?> class="captcha rotar1"
+			  size="4" readonly>
+		  
+			<input type="text" name="txtcopia" id="txtcopia" size="16" placeholder="captcha" required>
+		 
+
+	 
+
+	  <button type="submit" onclick="validar();">Login</button>
+	  <label>
+		<input type="checkbox" checked="checked" name="remember"> Recordarme
+	  </label>
+	</div>
+
+	
+
+	<div class="container" style="background-color:#888">
+	  <button type="button" onclick="document.getElementById('id01').style.display='none'"
+		class="cancelbtn">Cancelar</button>
+	  <span class="psw">No tienes cuenta? <a href="../registro.html">Suscribete</a></span>
+	  Olvidaste tu contraseña? <a href="enviacontra.php">Recuperar contraseña</a>
+	</div>
+  </form>
+</div>
+<script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+	if (event.target == modal) {
+	  modal.style.display = "none";
+	}
+  }
+</script>
+
+<?php
+function codigo_captcha(){
+  $k="";
+  $paramentros="ABCDEFGHIJKLMNOPQRSTUVXYZ015";
+  $maximo=strlen($paramentros)-1;
+  for($i=0; $i<5; $i++){
+	$k.=$paramentros[mt_rand(0,$maximo)];
+  }
+  return $k;
+}
+?>
+
+
+<script type="text/javascript">
+  function validar() {
+
+	var copia = document.getElementById("txtcopia").value;
+	var captcha = document.getElementById("captcha").value;
+
+	if (copia != captcha) {
+	  alert("Captcha incorrecto");
+	  window.open("logoutNI.php");
+	  window.close();
+	}
+
+
+  }
+</script>
+
+
 </logi>
