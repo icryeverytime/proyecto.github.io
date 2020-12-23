@@ -29,7 +29,7 @@ session_start();
     <nav>
       <ul>
         <li><a id="hide" href="index.php"><br>Inicio</a></li>
-        <li><a href="tienda.php" id="hide"><br>Tienda</a></li>
+        <li><a href="tienda/index.php" id="hide"><br>Tienda</a></li>
         <li><a class="active" href="acercade.php" id="hide"><br>Acerca de</a></li>
         <li><a href="contact.php" id="hide"><br>Contáctanos</a></li>
         <li><a href="faq.php" id="hide"><br>Ayuda</a></li>

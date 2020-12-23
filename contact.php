@@ -30,7 +30,7 @@ session_start();
         <ul>
 
           <li><a class="active" id="hide" href="index.php"><br>Inicio</a></li>
-          <li><a href="tienda.php" id="hide"><br>Tienda</a></li>
+          <li><a href="tienda/index.php" id="hide"><br>Tienda</a></li>
 
           <li><a href="acercade.php" id="hide"><br>Acerca de</a></li>
           <li><a href="contact.php" class="active" id="hide"><br>Contáctanos</a></li>
