@@ -241,7 +241,7 @@ echo $_SESSION["usuario"] ;
 		<?php else: ?>
 
 		<div class="item-option" title="Salir">
-			<a href="logout2.php"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+			<a href="logout.php"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
 		</div>
 
 		<?php endif; ?>

@@ -177,22 +177,14 @@ session_start();
       <label for="psw"><b>Contraseña</b></label>
       <input type="password" value="<?php if(isset($_COOKIE["contraseña"])){echo $_COOKIE["contraseña"];}?>" name="contraseña" required>
 
-      <table>
-
-        <tr>
-          <td>
+      
+        
             <input type="text" name="captcha" id="captcha" value=<?php echo codigo_captcha(); ?> class="captcha rotar1"
               size="4" readonly>
-          </td>
-          <td>
-            <input type="text" name="txtcopia" id="txtcopia" size="10" placeholder="Ingrese el captcha" required>
-          </td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-        </tr>
-
-      </table>
+          
+            <input type="text" name="txtcopia" id="txtcopia" size="10" placeholder="captcha" required>
+         
+        
 
       <button type="submit" onclick="validar();">Login</button>
       <label>

@@ -51,13 +51,13 @@ if($usuario=="admin@admin.admin")
             $_SESSION["usuario"] = $usuario;
         }
         else{ 
-            header("Location: ../../incorrecto.php");
+            header("Location: incorrecto.php");
             $band=1;
         }
 }
 
     if($band==0){
-        header("Location: ../../incorrecto.php");
+        header("Location: incorrecto.php");
         header("Location: index.php");
         $band=1;
         session_start();
@@ -65,7 +65,7 @@ if($usuario=="admin@admin.admin")
         
     }
     else{ 
-        header("Location: ../../incorrecto.php");
+        header("Location: incorrecto.php");
         $band=1;
     }
 }
@@ -96,11 +96,11 @@ else{
 }
 
 if($tries>3){//nada coincide y se acabaron los intentos
-    header("Location: ../../incorrecto2.php");
+    header("Location: incorrecto2.php");
 }
 
 if($band==0){//nada coincide
-    header("Location: ../../incorrecto.php");
+    header("Location: incorrecto.php");
 }
 
 

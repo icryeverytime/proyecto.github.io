@@ -41,7 +41,7 @@
 </head>
 <body>
 	<header>
-		<div class="logo-place"><a href="index.php"><img src="assets/logo.png"></a></div>
+		<div class="logo-place"><a href="../index.php"><img src="assets/logo.png"></a></div>
 	</header>
 	<div class="main-content">
 		<div class="content-page">
