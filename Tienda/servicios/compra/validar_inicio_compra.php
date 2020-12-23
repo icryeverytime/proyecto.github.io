@@ -2,6 +2,8 @@
 session_start();
 $response=new stdClass();
 
+$_SESSION['cant_carr'] +=1;
+
 if (!isset($_SESSION['usuario'])) {
 	$response->state=false;
 	$response->detail="No esta logeado";

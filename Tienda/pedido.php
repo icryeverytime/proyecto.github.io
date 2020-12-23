@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if (!isset($_SESSION['codusu'])) {
+	if (!isset($_SESSION['usuario'])) {
 		header('location: index.php');
 	}
 ?>
@@ -54,10 +54,23 @@
 								'<p><b>Celular:</b> '+data.datos[i].telusuped+'</p>'+
 							'</div>'+
 						'</div>';
-						if (data.datos[i].estado=="2") {
 							monto+=parseFloat(data.datos[i].prepro);
-						}
+						
 					}
+/*
+					let dirre=<?php $_POST['dirisu'];?>
+					let gasto = 0;
+
+					if(dirre == 'Aguascalientes'){
+						gasto = 0;
+					}else{
+						gasto = 100;
+					}
+					
+					let imp= monto*0.16;
+
+					monto +=imp+gasto; 
+*/
 					document.getElementById("montototal").innerHTML=monto;
 					document.getElementById("space-list").innerHTML=html;
 				},

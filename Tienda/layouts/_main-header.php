@@ -211,16 +211,9 @@ echo $_SESSION["usuario"] ;
 		<div class="item-option" title="Mis compras">
 			<a href="carrito.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 		</div>
+		<p style="color: white;"><?php echo "<p style='color: white;'>". $_SESSION['cant_carr'] ."</p>";?></p>
 	</div>
 </header>
-
-
-
-
-
-
-
-
 
 <logi>
 
