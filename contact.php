@@ -152,101 +152,96 @@ session_start();
 
 
 
+ 
+
+
   <logi>
 
-    <div id="id01" class="modal">
+<div id="id01" class="modal">
 
-      <form class="modal-content animate" action="validar.php" method="post">
-        <div class="imgcontainer">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
-          <img src="img/logologin.png" alt="Avatar" class="avatar">
-        </div>
+  <form class="modal-content animate" action="validar.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close"
+        title="Close Modal">&times;</span>
+      <img src="img/logologin.png" alt="Avatar" class="avatar">
+    </div>
 
-        <div class="container">
-          <label for="usuario"><b>Usuario</b></label>
-          <input type="text"  value="<?php if(isset($_COOKIE["usuario"])){echo $_COOKIE["usuario"];}?>" name="usuario" required>
+    <div class="container">
+      <label for="usuario"><b>Usuario</b></label>
+      <input type="text"  value="<?php if(isset($_COOKIE["usuario"])){echo $_COOKIE["usuario"];}?>" name="usuario" required>
 
-          <label for="psw"><b>Contraseña</b></label>
-          <input type="password" value="<?php if(isset($_COOKIE["contraseña"])){echo $_COOKIE["contraseña"];}?>" name="contraseña" required>
+      <label for="psw"><b>Contraseña</b></label>
+      <input type="password" value="<?php if(isset($_COOKIE["contraseña"])){echo $_COOKIE["contraseña"];}?>" name="contraseña" required>
 
-          <table>
-
-            <tr>
-              <td>
-                <input type="text" name="captcha" id="captcha" value=<?php echo codigo_captcha(); ?> class="captcha rotar1"
-                  size="4" readonly>
-              </td>
-              <td>
-                <input type="text" name="txtcopia" id="txtcopia" size="10" placeholder="Ingrese el captcha" required>
-              </td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-            </tr>
-
-          </table>
-
-          <button type="submit" onclick="validar();">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Recordarme
-          </label>
-        </div>
-
+      
+        
+            <input type="text" name="captcha" id="captcha" value=<?php echo codigo_captcha(); ?> class="captcha rotar1"
+              size="4" readonly>
+          
+            <input type="text" name="txtcopia" id="txtcopia" size="10" placeholder="captcha" required>
+         
         
 
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'"
-            class="cancelbtn">Cancelar</button>
-          <span class="psw">No tienes cuenta? <a href="registro.html">Suscribete</a></span>
-          Olvidaste tu contraseña? <a href="enviacontra.php">Recuperar contraseña</a>
-        </div>
-      </form>
+      <button type="submit" onclick="validar();">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Recordarme
+      </label>
     </div>
-    <script>
-      // Get the modal
-      var modal = document.getElementById('id01');
 
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
-    </script>
+    
 
-    <?php
-    function codigo_captcha(){
-      $k="";
-      $paramentros="ABCDEFGHIJKLMNOPQRSTUVXYZ015";
-      $maximo=strlen($paramentros)-1;
-      for($i=0; $i<5; $i++){
-        $k.=$paramentros[mt_rand(0,$maximo)];
-      }
-      return $k;
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'"
+        class="cancelbtn">Cancelar</button>
+      <span class="psw">No tienes cuenta? <a href="registro.html">Suscribete</a></span>
+      Olvidaste tu contraseña? <a href="enviacontra.php">Recuperar contraseña</a>
+    </div>
+  </form>
+</div>
+<script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
   }
-  ?>
+</script>
+
+<?php
+function codigo_captcha(){
+  $k="";
+  $paramentros="ABCDEFGHIJKLMNOPQRSTUVXYZ015";
+  $maximo=strlen($paramentros)-1;
+  for($i=0; $i<5; $i++){
+    $k.=$paramentros[mt_rand(0,$maximo)];
+  }
+  return $k;
+}
+?>
 
 
-    <script type="text/javascript">
-      function validar() {
+<script type="text/javascript">
+  function validar() {
 
-        var copia = document.getElementById("txtcopia").value;
-        var captcha = document.getElementById("captcha").value;
+    var copia = document.getElementById("txtcopia").value;
+    var captcha = document.getElementById("captcha").value;
 
-        if (copia != captcha) {
-          alert("Captcha incorrecto");
-          //window.location.href = 'incorrecto.php';
-          window.open("logoutNI.php");
-          window.close();
-        }
-
-
-      }
-    </script>
+    if (copia != captcha) {
+      alert("Captcha incorrecto");
+      //window.location.href = 'incorrecto.php';
+      window.open("logoutNI.php");
+      window.close();
+    }
 
 
-  </logi>
+  }
+</script>
+
+
+</logi>
 
 
 
