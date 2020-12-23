@@ -16,6 +16,44 @@ session_start();
 
   <script src="https://kit.fontawesome.com/cebbaaaaab.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/funciones.js"></script>
+  <style>
+.botoncito {
+  position: relative;
+  border-radius: 1em;
+  background-color: #001845;
+  border: none;
+  font-size: 20px;
+  color: white;
+  text-shadow: 4px 4px black;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.botoncito:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.botoncito:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+  </style>
 
 
   <script>
@@ -52,7 +90,7 @@ session_start();
   </script>
 </head>
 
-<body>
+<body style="background-color: #444442;">
 
       <header>
     <div id="navbar">
@@ -108,15 +146,15 @@ session_start();
         </div>
       </div>
   </header>
-
+<br><br><br><br><br>
   <div class="content">
    <form action="enviopass.php" style="text-align: center;" method="POST">
-   <label for="correo">Correo a enviar contraseña:</label>
-   <input name="correo" type="email" id="correo">
-   <input type="submit" value="Enviar contraseña">
+   <label for="correo" style="font-family: Arial; padding:8px; color:white; font-size:30px;   text-shadow: 4px 4px black;"><strong>Correo a enviar contraseña:</strong></label><br><br>
+   <input style="border-radius:1em;" size="50" maxlenght="50" name="correo" type="email" id="correo"><br><br>
+   <input class="botoncito" type="submit" value="Enviar contraseña">
    </form>
   </div>
-  
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <footer>
     <div class="pie">
       <div>
